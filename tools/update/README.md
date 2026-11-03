@@ -100,5 +100,9 @@ https://m.dianping.com/myshow/ajax/performances/0;st=0;p={页};s=100;tft=0?cityI
 - **策展清单**：`data/exhibitions.json`（美术馆/博物馆特展）、`data/big_shows.json`（大场馆演出，主要补大麦独家）。
   每周由定时任务联网核实后更新；与平台条目重名的只给平台条目补「官方信息」链接。
 - 大麦网页对自动化弹滑块验证码，不抓取；只在详情页给大麦搜索入口。
+- **旗舰场馆官网**（第 12 步 `venue_crawl.py` → `data/official_shows.json`）：上海大剧院、上交音乐厅、东方艺术中心。
+  用的是官网页面自己调用的接口（需要特定请求头，见脚本注释）。首次接入时 91 个节目里 85 个平台已有，
+  主要价值是补官方链接、提前收录平台还没上架的远期场次。某家失败会沿用上次数据。
+  注意：`shculturesquare.com` 不是上海文化广场官网（域名已被博彩站占用），官网是 `shcstheatre.com`。
 
 试跑不写回：`python3 tools/update/curate.py --dry`

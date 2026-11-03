@@ -4,7 +4,7 @@
 # 用法：bash tools/update/update.sh
 #
 # 流程：清缓存 → 豆瓣抓取 → 解析 → 合并 → 豆瓣海报 → 写回
-#       → 猫眼抓取 → 解析 → 合并 → 猫眼海报 → 终局去重 → 策展
+#       → 猫眼抓取 → 解析 → 合并 → 猫眼海报 → 终局去重 → 场馆官网 → 策展
 #
 # 注意：db_crawl.py 有断点续抓（/tmp/db_crawl 缓存），不清理就抓不到任何新数据，
 #       所以第一步必须清缓存 —— 这是定时更新长期「没变化」的根因之一。
@@ -32,16 +32,16 @@ step() {
 }
 
 # 1. 清豆瓣抓取缓存（关键）
-step "1/12 清理豆瓣抓取缓存"
+step "1/13 清理豆瓣抓取缓存"
 rm -rf /tmp/db_crawl
 echo "已清空 /tmp/db_crawl"
 
 # 2. 豆瓣抓取
-step "2/12 抓取豆瓣同城·上海"
+step "2/13 抓取豆瓣同城·上海"
 "$PY" "$HERE/db_crawl.py" || echo "!! 豆瓣抓取异常，继续后续步骤"
 
 # 3. 解析
-step "3/12 解析豆瓣数据"
+step "3/13 解析豆瓣数据"
 if [ ! -d /tmp/db_crawl ] || [ -z "$(ls -A /tmp/db_crawl 2>/dev/null)" ]; then
   echo "!! 豆瓣无数据，跳过豆瓣链路"
 else
@@ -49,7 +49,7 @@ else
 fi
 
 # 4. 合并（写回 merged_events.json）
-step "4/12 合并豆瓣新旧数据"
+step "4/13 合并豆瓣新旧数据"
 if [ -f /tmp/db_parsed.json ]; then
   "$PY" "$HERE/db_merge.py" --write || echo "!! 合并失败"
 else
@@ -57,7 +57,7 @@ else
 fi
 
 # 5. 豆瓣海报
-step "5/12 下载豆瓣新海报"
+step "5/13 下载豆瓣新海报"
 if [ -f /tmp/merged_events.json ]; then
   "$PY" "$HERE/dl_posters.py" || echo "!! 海报下载部分失败（不影响主流程）"
   "$PY" "$HERE/conv_posters.py" || echo "!! webp 转换失败"
@@ -66,7 +66,7 @@ else
 fi
 
 # 6. 写回 index.html
-step "6/12 写回 index.html（豆瓣部分）"
+step "6/13 写回 index.html（豆瓣部分）"
 if [ -f /tmp/merged_events.json ]; then
   "$PY" "$HERE/db_writeback.py" || echo "!! 写回失败"
 else
@@ -74,11 +74,11 @@ else
 fi
 
 # 7. 猫眼抓取
-step "7/12 抓取猫眼演出"
+step "7/13 抓取猫眼演出"
 "$PY" "$HERE/maoyan_crawl.py" || echo "!! 猫眼抓取失败"
 
 # 8. 猫眼解析（data.json → parsed.json）
-step "8/12 解析猫眼数据"
+step "8/13 解析猫眼数据"
 if [ -f /tmp/maoyan_data.json ]; then
   "$PY" "$HERE/maoyan_parse.py" || echo "!! 猫眼解析失败"
 else
@@ -86,7 +86,7 @@ else
 fi
 
 # 9. 猫眼合并写回
-step "9/12 合并猫眼数据并写回"
+step "9/13 合并猫眼数据并写回"
 if [ -f /tmp/maoyan_parsed.json ]; then
   "$PY" "$HERE/maoyan_merge.py" || echo "!! 猫眼合并失败"
 else
@@ -94,7 +94,7 @@ else
 fi
 
 # 10. 猫眼海报
-step "10/12 下载猫眼海报"
+step "10/13 下载猫眼海报"
 if [ -f /tmp/need_posters.json ]; then
   "$PY" "$HERE/dl_maoyan_posters.py" || echo "!! 猫眼海报部分失败"
 else
@@ -102,11 +102,15 @@ else
 fi
 
 # 11. 终局去重（同标题多门店/多源卡片合并）
-step "11/12 终局去重"
+step "11/13 终局去重"
 "$PY" "$HERE/dedupe_final.py" || echo "!! 去重失败"
 
-# 12. 策展：场馆白名单过滤 + 9 类归类 + 合并美术馆展览/大型演出清单（data/*.json）
-step "12/12 策展（白名单 / 归类 / 合并清单）"
+# 12. 旗舰场馆官网（大剧院 / 上交 / 东艺）→ data/official_shows.json；某家失败沿用上次数据
+step "12/13 抓取旗舰场馆官网"
+"$PY" "$HERE/venue_crawl.py" || echo "!! 场馆官网抓取失败（沿用上次数据）"
+
+# 13. 策展：场馆白名单过滤 + 9 类归类 + 合并美术馆展览/大型演出/官网清单（data/*.json）
+step "13/13 策展（白名单 / 归类 / 合并清单）"
 "$PY" "$HERE/curate.py" || echo "!! 策展失败"
 
 # 汇报

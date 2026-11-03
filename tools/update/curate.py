@@ -8,7 +8,8 @@
 2. 噪声黑名单：白名单场馆里的 DIY / VR / 烛光 / 开放麦 / 通票 等也剔除
 3. 9 类归类：标题强信号 > 平台分类 > 场馆类型；拿不准的写进 data/review_queue.json
 4. 人工/Claude 复核结果 data/labels.json 优先级最高（{id: {"category": ..., "drop": bool, "note": ...}}）
-5. 合并策展清单 data/exhibitions.json（美术馆展览）和 data/big_shows.json（大型演出）
+5. 合并策展清单 data/exhibitions.json（美术馆展览）、data/big_shows.json（大型演出）
+   和 data/official_shows.json（旗舰场馆官网，由 venue_crawl.py 生成）
 
 用法：python3 curate.py [--dry]
 """
@@ -72,6 +73,11 @@ def nz(s):
     return re.sub(r'[\W_]+', '', (s or '')).lower()
 
 
+def nk(s):
+    """跨来源比对标题用：统一常见简称后再归一化"""
+    return nz((s or '').replace('上海交响乐团', '上交'))
+
+
 class VenueIndex:
     def __init__(self, cfg):
         self.venues = cfg['venues']
@@ -132,9 +138,11 @@ def classify(e, venue):
 
 
 def curated_event(item, kind, venue):
-    vid = hashlib.md5((item['title'] + item['venue']).encode()).hexdigest()[:10]
+    vid = hashlib.md5((item.get('oid') or (item['title'] + item['venue'])).encode()).hexdigest()[:10]
     sd, ed = item.get('start_date'), item.get('end_date')
     date_raw = f"{sd} ~ {ed}" if ed and ed != sd else (sd or '')
+    if (item.get('sessions') or 0) > 1:
+        date_raw += f"（共 {item['sessions']} 场）"
     if not ed and kind == 'ex':
         date_raw = f"{sd} 起（闭展日期待官方公布）"
     return {
@@ -151,6 +159,7 @@ def curated_event(item, kind, venue):
         'url': item.get('url'), 'source': 'official', 'tags': item.get('tags') or [],
         'tickets': {'search_kw': item['title'], 'official': item.get('url')},
         'note': item.get('note') or '', 'ticketing': item.get('ticketing') or '',
+        'poster': item.get('poster_url') or '',
     }
 
 
@@ -197,9 +206,12 @@ def main():
 
     # 策展清单
     added, merged_official = Counter(), 0
-    title_ix = {nz(e['title']): e for e in kept}
-    for fname, kind in (('exhibitions.json', 'ex'), ('big_shows.json', 'bs')):
+    title_ix = {nk(e['title']): e for e in kept}
+    for fname, kind in (('exhibitions.json', 'ex'), ('big_shows.json', 'bs'), ('official_shows.json', 'os')):
         for item in load_json(fname, []):
+            if kind == 'os' and any(rx.search(item['title']) for rx in noise):
+                added['官网噪声剔除'] += 1
+                continue
             if (item.get('end_date') or item.get('start_date') or '9999') < today:
                 continue
             if not item.get('start_date'):   # 开幕日期未公布的先不上站，等清单补全
@@ -208,15 +220,29 @@ def main():
             v = vidx.match(item.get('venue'))
             ce = curated_event(item, kind, v)
             # 主标题：去掉括号里的英文名、破折号/冒号后的副标题（平台标题常只写主标题或换了副标题）
-            full = re.sub(r'[（(][^）)]*[）)]', '', item['title'])
-            cores = [c for c in {nz(full), nz(re.split(r'——|：|:', full)[0])} if len(c) >= 5]
-            dup = title_ix.get(nz(item['title'])) or next(
+            # 官网标题常带「丨上海交响乐团音乐季」这类后缀
+            full = re.split(r'[丨｜|]', re.sub(r'[（(][^）)]*[）)]', '', item['title']))[0]
+            cores = [c for c in {nk(full), nk(re.split(r'——|：|:', full)[0])} if len(c) >= 5]
+            dup = title_ix.get(nk(item['title'])) or next(
                 (x for t, x in title_ix.items() if any(c in t or t in c for c in cores)
                  and x.get('venue_canon') == (v['name'] if v else ce['venue'])), None)
             if dup:   # 平台上已经有：只补官方链接
                 dup.setdefault('tickets', {})['official'] = item.get('url')
                 merged_official += 1
                 continue
+            if kind == 'os':   # 官网条目没有可靠分类，和平台条目走同一套归类 + 复核
+                lab = labels.get(ce['id'], {})
+                if lab.get('drop'):
+                    added['官网复核剔除'] += 1
+                    continue
+                if lab.get('category') in CATEGORIES:
+                    ce['category'] = lab['category']
+                else:
+                    ce['category'], sure, why = classify({'title': item['title']}, v)
+                    if not sure:
+                        review.append({'id': ce['id'], 'title': item['title'], 'venue': ce['venue'],
+                                       'raw_category': item.get('platform_category'), 'guess': ce['category'], 'why': why})
+                title_ix[nk(item['title'])] = ce   # 同一官网清单内也去重
             if v:
                 ce['venue_grade'], ce['venue_level'] = v['tier'], cfg['types'][v['type']]
                 ce['venue_canon'] = v['name']
