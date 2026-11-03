@@ -1,0 +1,6 @@
+*.bak-*
+.DS_Store
+__pycache__/
+logs/
+.claude/
+.private/

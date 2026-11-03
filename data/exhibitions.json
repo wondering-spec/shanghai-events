@@ -1,0 +1,441 @@
+[
+  {
+    "title": "世界树之巅：美洲古代文明大展",
+    "venue": "上海博物馆（人民广场馆）",
+    "start_date": "2026-07-09",
+    "end_date": "2027-11-14",
+    "price_text": "收费（单展正价票金额未核实；与上海动物园联票169元起）",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.news.cn/shuhua/20260709/ff8f56c2cfb0403bb6a51a8afeae8e14/c.html",
+    "tags": [
+      "文物/历史",
+      "大师/名团"
+    ],
+    "note": "单展正价票价格未在来源中找到，price_min 暂填0；上博年度计划曾写'至2027年10月'，多家2026年报道为2027-11-14"
+  },
+  {
+    "title": "金冠之下：新罗文物精华展",
+    "venue": "上海博物馆（东馆）",
+    "start_date": "2026-09-23",
+    "end_date": "2027-01-18",
+    "price_text": "免费",
+    "price_min": 0,
+    "is_free": true,
+    "url": "https://news.qq.com/rain/a/20261030A087T000",
+    "tags": [
+      "文物/历史"
+    ],
+    "note": "9月22日开幕，9月23日起对公众开放；周二闭馆"
+  },
+  {
+    "title": "环宇璀璨：大都会艺术博物馆珠宝珍藏展",
+    "venue": "上海博物馆（东馆）",
+    "start_date": "2026-11-18",
+    "end_date": "2027-05-05",
+    "price_text": "免费（需在上博公众号预约）",
+    "price_min": 0,
+    "is_free": true,
+    "url": "https://news.qq.com/rain/a/20261102A039XM00",
+    "tags": [
+      "文物/历史",
+      "设计/建筑",
+      "大师/名团"
+    ],
+    "note": "截至11月初尚未开放预约"
+  },
+  {
+    "title": "大音希声：八大山人诞辰400周年书画艺术大展",
+    "venue": "上海博物馆（东馆）",
+    "start_date": null,
+    "end_date": null,
+    "price_text": "未公布",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/article/id/I00004987",
+    "tags": [
+      "文物/历史",
+      "绘画/雕塑",
+      "大师/名团"
+    ],
+    "note": "上博2026年展览计划写'2026年12月至2027年3月'，具体开幕/闭幕日期尚未公布；票价未公布"
+  },
+  {
+    "title": "卡罗莱娜·凯塞多：鲸鱼的致敬（Carolina Caycedo）",
+    "venue": "浦东美术馆",
+    "start_date": "2026-02-12",
+    "end_date": "2027-02-21",
+    "price_text": "浦东美术馆门票100元起",
+    "price_min": 100,
+    "is_free": false,
+    "url": "https://www.museumofartpd.org.cn/exhibitiondetail?id=212",
+    "tags": [
+      "当代艺术"
+    ],
+    "note": "浦东美术馆与泰特联合委任新作；票价取自本地宝对浦美当日门票'100元起'的说明"
+  },
+  {
+    "title": "la Galerie du 19M SHANGHAI（香奈儿le19M高级手工坊展）",
+    "venue": "浦东美术馆",
+    "start_date": "2026-09-25",
+    "end_date": "2026-11-15",
+    "price_text": "需'le19M'小程序预约，并持浦东美术馆当日门票（100元起）",
+    "price_min": 100,
+    "is_free": false,
+    "url": "https://www.museumofartpd.org.cn/exhibitiondetail?id=220",
+    "tags": [
+      "设计/建筑"
+    ],
+    "note": "品牌主办的工艺展，位于浦美三层"
+  },
+  {
+    "title": "达明安·赫斯特大展（Damien Hirst）",
+    "venue": "浦东美术馆",
+    "start_date": "2026-12-16",
+    "end_date": "2027-08-15",
+    "price_text": "80元起",
+    "price_min": 80,
+    "is_free": false,
+    "url": "https://whlyj.sh.gov.cn/yshd/20261030/3eb3ba2bda464a67a2ea1cd474813639.html",
+    "tags": [
+      "当代艺术",
+      "大师/名团"
+    ],
+    "note": "达明安·赫斯特中国大陆首个美术馆大型个展；正式展名以官方发布为准"
+  },
+  {
+    "title": "突破无人之境——方增先回顾展",
+    "venue": "中华艺术宫（中国馆）",
+    "start_date": "2026-08-10",
+    "end_date": "2026-11-15",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/08/09/2c906d9b9e0127fe019fe70ad32b241e.html",
+    "tags": [
+      "绘画/雕塑",
+      "大师/名团"
+    ],
+    "note": "上海美术馆建馆70周年系列；上海美术馆现址即中华艺术宫；票价来源未提及"
+  },
+  {
+    "title": "《我与上海不可分割》建筑师俞挺空间概念展",
+    "venue": "中华艺术宫（中国馆）",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/01/01/2c906d9b98ccf29e019b72f2206c57c9.html",
+    "tags": [
+      "设计/建筑"
+    ],
+    "note": "上海美术馆70周年项目，0米层；票价来源未提及"
+  },
+  {
+    "title": "布里奇曼名画奇旅",
+    "venue": "中华艺术宫（中国馆）",
+    "start_date": "2026-06-26",
+    "end_date": "2027-06-30",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/07/02/2c906d9b9e0127fe019f2226fda27afd.html",
+    "tags": [
+      "数字/AI艺术",
+      "绘画/雕塑"
+    ],
+    "note": "B2层；官网描述为'沉浸式体验世界美术史名作'，应为数字沉浸项目而非原作展；票价未核实"
+  },
+  {
+    "title": "刘家琨：明月构想",
+    "venue": "上海当代艺术博物馆 PSA",
+    "start_date": "2026-11-14",
+    "end_date": "2027-02-28",
+    "price_text": "60元",
+    "price_min": 60,
+    "is_free": false,
+    "url": "https://whlyj.sh.gov.cn/yshd/20261030/3eb3ba2bda464a67a2ea1cd474813639.html",
+    "tags": [
+      "设计/建筑",
+      "大师/名团"
+    ],
+    "note": "2025年普利兹克奖得主刘家琨全球首个大型个展"
+  },
+  {
+    "title": "计算万千世界（Computer Worlds）",
+    "venue": "西岸美术馆",
+    "start_date": "2026-09-24",
+    "end_date": "2027-02-14",
+    "price_text": "60–100元",
+    "price_min": 60,
+    "is_free": false,
+    "url": "https://cn.chinadaily.com.cn/a/202610/09/WS6ac88f7ee4b09a165c78e671.html",
+    "tags": [
+      "数字/AI艺术",
+      "当代艺术",
+      "大师/名团"
+    ],
+    "note": "西岸美术馆×蓬皮杜中心特展，展厅3；票价来自上海本地宝2026-10-19文章"
+  },
+  {
+    "title": "征途与山河：红色经典美术作品展",
+    "venue": "龙美术馆（西岸馆）",
+    "start_date": "2026-09-12",
+    "end_date": "2027-02-28",
+    "price_text": "收费，票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://m.thepaper.cn/newsDetail_forward_34011241",
+    "tags": [
+      "绘画/雕塑"
+    ],
+    "note": "西楼展厅；另有报道称9月25日开幕、9.25–10.7免费；常规票价未在来源中找到"
+  },
+  {
+    "title": "十年之路：1979-1989中国当代艺术",
+    "venue": "龙美术馆（西岸馆）",
+    "start_date": "2026-11-11",
+    "end_date": "2027-02-14",
+    "price_text": "收费，票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.sohu.com/a/1092110714_121124746",
+    "tags": [
+      "当代艺术",
+      "绘画/雕塑"
+    ],
+    "note": "第一/二展厅；来源为龙美术馆2026-10-24展览预告"
+  },
+  {
+    "title": "微暗的光：夏禹，一个人和一个时代",
+    "venue": "龙美术馆（西岸馆）",
+    "start_date": "2026-11-12",
+    "end_date": "2027-02-14",
+    "price_text": "收费，票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.sohu.com/a/1092110714_121124746",
+    "tags": [
+      "当代艺术",
+      "绘画/雕塑"
+    ],
+    "note": "阶梯展厅，策展人鲁明军"
+  },
+  {
+    "title": "艾迪·马丁内斯：侦探（Eddie Martinez）",
+    "venue": "复星艺术中心",
+    "start_date": "2026-11-11",
+    "end_date": "2027-01-03",
+    "price_text": "早鸟38元，常规80元",
+    "price_min": 38,
+    "is_free": false,
+    "url": "https://whlyj.sh.gov.cn/yshd/20261030/3eb3ba2bda464a67a2ea1cd474813639.html",
+    "tags": [
+      "当代艺术",
+      "绘画/雕塑"
+    ]
+  },
+  {
+    "title": "约塔·蒙巴萨：（在潮汐里）困于流动中（Jota Mombaça: stuck in movement (in the tide)）",
+    "venue": "上海外滩美术馆 RAM",
+    "start_date": "2026-10-31",
+    "end_date": "2027-02-21",
+    "price_text": "免费（需线上预约）",
+    "price_min": 0,
+    "is_free": true,
+    "url": "https://www.rockbundartmuseum.org/exhibition/jota-mombaca-stuck-in-movement-in-the-tide",
+    "tags": [
+      "当代艺术"
+    ],
+    "note": "RAM自2025年5月起全馆展览免费、需预约（该政策来源为2025年报道）；有第三方称10月22日开幕，以官网10月31日为准"
+  },
+  {
+    "title": "黄洁宜：BANK-A-OKE / TEM-PLE-OKE（Wong Kit Yi）",
+    "venue": "上海外滩美术馆 RAM",
+    "start_date": "2026-10-31",
+    "end_date": "2027-02-21",
+    "price_text": "免费（需线上预约）",
+    "price_min": 0,
+    "is_free": true,
+    "url": "https://www.rockbundartmuseum.org/exhibition/kit-yi-wong-bankaoke",
+    "tags": [
+      "当代艺术"
+    ],
+    "note": "官网分为BANK-A-OKE与TEM-PLE-OKE两个页面，此处合并"
+  },
+  {
+    "title": "阿娜利亚·萨班：艺术机器（Analia Saban）",
+    "venue": "油罐艺术中心 TANK",
+    "start_date": "2026-11-07",
+    "end_date": "2027-02-28",
+    "price_text": "收费（票价未公布）",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://whlyj.sh.gov.cn/yshd/20261030/3eb3ba2bda464a67a2ea1cd474813639.html",
+    "tags": [
+      "当代艺术",
+      "数字/AI艺术"
+    ],
+    "note": "横跨纺织、雕塑、科技与动态影像；具体票价未公布"
+  },
+  {
+    "title": "塑我此生：贾科梅蒂艺术大展",
+    "venue": "上海民生现代美术馆",
+    "start_date": "2026-07-17",
+    "end_date": "2026-12-06",
+    "price_text": "60元（上海文旅局）；另有来源称98元、早鸟58元",
+    "price_min": 60,
+    "is_free": false,
+    "url": "https://whlyj.sh.gov.cn/yshd/20261030/3eb3ba2bda464a67a2ea1cd474813639.html",
+    "tags": [
+      "绘画/雕塑",
+      "大师/名团"
+    ],
+    "note": "票价来源不一致"
+  },
+  {
+    "title": "约翰尼·德普：边缘形象（Johnny Depp: Figures of the Fringe）",
+    "venue": "艺仓美术馆",
+    "start_date": "2026-08-15",
+    "end_date": "2026-12-13",
+    "price_text": "单人票98元，优待票78元（早鸟58元已结束）",
+    "price_min": 78,
+    "is_free": false,
+    "url": "https://m.thepaper.cn/detail/34114116",
+    "tags": [
+      "绘画/雕塑",
+      "大师/名团"
+    ]
+  },
+  {
+    "title": "无以名：阳新雕塑艺术展",
+    "venue": "宝龙美术馆",
+    "start_date": "2026-09-24",
+    "end_date": "2026-11-15",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.powerlongmuseum.com/exhibition_now.html",
+    "tags": [
+      "绘画/雕塑"
+    ],
+    "note": "8号厅；官网未列票价"
+  },
+  {
+    "title": "快乐公式·史莱姆感官漫游记",
+    "venue": "宝龙美术馆",
+    "start_date": "2026-10-01",
+    "end_date": "2027-04-05",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.powerlongmuseum.com/exhibition_now.html",
+    "tags": [
+      "当代艺术"
+    ],
+    "note": "9号厅；偏亲子/体验类展览；官网未列票价"
+  },
+  {
+    "title": "中国漫画百年回眸巡展",
+    "venue": "刘海粟美术馆",
+    "start_date": null,
+    "end_date": null,
+    "price_text": "票价未公布",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.thepaper.cn/newsDetail_forward_34344279",
+    "tags": [
+      "绘画/雕塑",
+      "文物/历史"
+    ],
+    "note": "报道称'11月初'（文旅局转载称'11月中旬'）开幕，持续至2027年1月中旬，具体日期未公布"
+  },
+  {
+    "title": "康迪达·赫弗：集会排演（Candida Höfer）",
+    "venue": "Fotografiska影像艺术中心",
+    "start_date": "2026-10-30",
+    "end_date": "2027-02-21",
+    "price_text": "80元",
+    "price_min": 80,
+    "is_free": false,
+    "url": "https://whlyj.sh.gov.cn/yshd/20261030/3eb3ba2bda464a67a2ea1cd474813639.html",
+    "tags": [
+      "摄影",
+      "大师/名团"
+    ],
+    "note": "开幕日期10-30取自静安发布（搜狐）2026-11-02文章"
+  },
+  {
+    "title": "罗曼·西格纳：影像 一九七五至一九八九和现在（Roman Signer）",
+    "venue": "上海久事美术馆",
+    "start_date": "2026-10-31",
+    "end_date": "2027-01-03",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.thepaper.cn/newsDetail_forward_34380666",
+    "tags": [
+      "当代艺术",
+      "摄影"
+    ],
+    "note": "外滩1号"
+  },
+  {
+    "title": "一瓷一色一世界：上海博物馆藏明清颜色釉瓷器特展",
+    "venue": "上海久事美术馆",
+    "start_date": "2026-07-20",
+    "end_date": "2027-02-14",
+    "price_text": "免费",
+    "price_min": 0,
+    "is_free": true,
+    "url": "https://www.thepaper.cn/newsDetail_forward_33622082",
+    "tags": [
+      "文物/历史"
+    ],
+    "note": "世展网清单写7月18日，澎湃报道为7月20日对外展出"
+  },
+  {
+    "title": "海上有佳人——林风眠与海派仕女画",
+    "venue": "上海中国画院美术馆",
+    "start_date": "2026-08-14",
+    "end_date": "2026-11-15",
+    "price_text": "免费",
+    "price_min": 0,
+    "is_free": true,
+    "url": "https://whlyj.sh.gov.cn/yshd/20261030/3eb3ba2bda464a67a2ea1cd474813639.html",
+    "tags": [
+      "绘画/雕塑",
+      "大师/名团"
+    ]
+  },
+  {
+    "title": "一钩新月天如水——丰子恺艺术文献展",
+    "venue": "朱屺瞻艺术馆",
+    "start_date": "2026-10-31",
+    "end_date": "2027-01-15",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://www.thepaper.cn/newsDetail_forward_34380666",
+    "tags": [
+      "绘画/雕塑",
+      "文物/历史"
+    ]
+  },
+  {
+    "title": "丰神独绝：董其昌与晚明书法艺术特展",
+    "venue": "董其昌书画艺术博物馆",
+    "start_date": "2026-10-20",
+    "end_date": "2027-01-19",
+    "price_text": "票价未核实",
+    "price_min": 0,
+    "is_free": false,
+    "url": "https://news.qq.com/rain/a/20261030A087T000",
+    "tags": [
+      "文物/历史",
+      "绘画/雕塑"
+    ],
+    "note": "位于松江醉白池公园内，可能需公园门票"
+  }
+]
