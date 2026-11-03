@@ -40,6 +40,13 @@ python3 dl_maoyan_posters.py
 python3 dedupe_final.py
 ```
 
+## 豆瓣抓取时长上限
+
+`db_crawl.py` 默认最多抓 20 分钟（环境变量 `DB_CRAWL_MAX_MIN` 可改），连续 8 页失败也直接收工。
+提前收工时会写 `/tmp/db_crawl/_PARTIAL`，`db_merge.py` 看到它就保留上周未过期的豆瓣条目，
+所以豆瓣不稳只会让这周少刷新一部分，不会让总条数骤降。
+（2026-11-03 首次自动运行时豆瓣大量 SSL 断连，抓取拖了 2 个多小时，因此加了这个上限。）
+
 ## 依赖
 
 - Python 3（`db_merge.py` / `db_writeback.py` 用标准库；`conv_posters.py` / `dl_maoyan_posters.py` 需要 Pillow）

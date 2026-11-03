@@ -369,7 +369,10 @@ def main():
         e['poster'] = f"posters/{eid}.webp"
         merged[eid] = e
 
-    # 保留老数据中未过期的猫眼条目（豆瓣没覆盖的）
+    # 保留老数据中未过期的猫眼条目（豆瓣没覆盖的）；豆瓣抓取提前收工时，老的豆瓣条目也保留
+    partial = os.path.exists('/tmp/db_crawl/_PARTIAL')
+    if partial:
+        print("豆瓣抓取不完整：未刷新到的老豆瓣条目也保留")
     keep_maoyan = 0
     old_noise = 0
     for e in old:
@@ -377,7 +380,7 @@ def main():
         if eid in merged:
             continue
         src = (e.get('source') or '')
-        if 'maoyan' not in src:
+        if 'maoyan' not in src and not (partial and src == 'douban'):
             continue
         if (e.get('end_date') or '9999') < TODAY:
             continue

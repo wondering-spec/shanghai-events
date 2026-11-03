@@ -4,6 +4,10 @@
 import os, re, time, random, urllib.request, urllib.error
 
 OUT = '/tmp/db_crawl'
+PARTIAL = os.path.join(OUT, '_PARTIAL')   # 提前收工的标记，db_merge.py 据此保留老的豆瓣条目
+# 总时长上限（分钟）：豆瓣连接不稳时重试会把一次更新拖到几小时，到点就用已抓到的页继续
+MAX_MINUTES = float(os.environ.get('DB_CRAWL_MAX_MIN', '20'))
+MAX_FAIL_STREAK = 8   # 连续失败这么多页，基本是被限流/断连，直接收工
 os.makedirs(OUT, exist_ok=True)
 
 UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
@@ -50,7 +54,14 @@ def fetch(url, tries=3):
 
 def main():
     total_pages = 0
+    deadline = time.time() + MAX_MINUTES * 60
+    fail_streak = 0
+    stop_reason = ''
+    if os.path.exists(PARTIAL):
+        os.remove(PARTIAL)
     for slug, name, maxp in CATS:
+        if stop_reason:
+            break
         print(f"\n=== {name} (future-{slug}) ===", flush=True)
         empty_streak = 0
         for p in range(maxp):
@@ -60,11 +71,19 @@ def main():
                 print(f"  {start:5d} 已存在，跳过", flush=True)
                 total_pages += 1
                 continue
+            if time.time() > deadline:
+                stop_reason = f'超过 {MAX_MINUTES:g} 分钟上限'
+                break
             url = f'https://www.douban.com/location/shanghai/events/future-{slug}?start={start}'
             h = fetch(url)
             if h is None:
+                fail_streak += 1
                 print(f"  {start:5d} 失败", flush=True)
+                if fail_streak >= MAX_FAIL_STREAK:
+                    stop_reason = f'连续 {fail_streak} 页失败'
+                    break
                 continue
+            fail_streak = 0
             n = h.count('class="list-entry"')
             if n == 0:
                 empty_streak += 1
@@ -77,7 +96,11 @@ def main():
             total_pages += 1
             print(f"  {start:5d} 保存 {n} 条 (累计 {total_pages} 页)", flush=True)
             time.sleep(random.uniform(1.0, 1.6))
-    print(f"\n抓取结束，共 {total_pages} 页", flush=True)
+    if stop_reason:
+        open(PARTIAL, 'w').write(stop_reason)
+        print(f"\n!! 豆瓣抓取提前结束（{stop_reason}），共 {total_pages} 页；未抓到的老条目会保留", flush=True)
+    else:
+        print(f"\n抓取结束，共 {total_pages} 页", flush=True)
 
 if __name__ == '__main__':
     main()
