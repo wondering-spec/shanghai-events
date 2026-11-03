@@ -7,12 +7,15 @@
 
   上海大剧院       thvendor 平台 querySchedulesByDate（GET，需 cmpappkey 头）
   上海交响乐团音乐厅 thvendor 平台 homeProgramList（POST，需 cmpappkey 头，带海报）
+  上音歌剧院       thvendor 平台 getHotProgramList（POST，需 cmpappkey 头，带海报和票价）
   上海东方艺术中心   platform-backend dongyi-products/{年}/{月}（需 Channel/Theater 头）
+  上海文化广场      shcstheatre.com 节目列表页 HTML（服务端渲染，带海报/票价/日期）
+                   注意 shculturesquare.com 不是官网（域名已被博彩站占用）
 
 接口都是官网页面自己在用的公开接口，每周只请求十几次。
 用法：python3 venue_crawl.py
 """
-import os, re, json, datetime, urllib.request, urllib.parse
+import os, re, json, time, datetime, urllib.request, urllib.parse
 from collections import defaultdict
 
 SITE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -22,11 +25,17 @@ UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
 DAYS_AHEAD = 120
 
 
-def get_json(url, headers, data=None):
+def get_json(url, headers, data=None, tries=3):
     body = urllib.parse.urlencode(data).encode() if data is not None else None
     req = urllib.request.Request(url, data=body, headers={'User-Agent': UA, 'Accept': 'application/json', **headers})
-    with urllib.request.urlopen(req, timeout=25) as r:
-        return json.load(r)
+    for t in range(tries):
+        try:
+            with urllib.request.urlopen(req, timeout=25) as r:
+                return json.load(r)
+        except OSError:   # SSL 断连 / 超时：官网偶发，稍等重试
+            if t == tries - 1:
+                raise
+            time.sleep(3 * (t + 1))
 
 
 def months(start, end):
@@ -77,31 +86,83 @@ def fetch_sgt(today, end):
                           lambda k: f'https://www.shgtheatre.com/shtheatre/index.html#/ticket/detail/{k}')
 
 
-def fetch_shso(today, end):
-    H = {'Referer': 'https://www.shsymphony.cn/symphonypc/index.html', 'cmpappkey': 'shsymphonyPC', 'lang': 'zh-CN'}
+def thvendor_programs(api, headers, form, venue, url_of, end):
+    """thvendor 平台（大剧院/上交/上音共用的票务系统）的节目列表接口，翻页取全"""
     out, page = [], 1
     while True:
-        d = get_json('https://www.shsymphony.cn/thvendor/symphony/program/homeProgramList.xhtml', H,
-                     {'showSite': 'pcHome', 'pageNo': page, 'pageSize': 100})
+        d = get_json(api, headers, {**form, 'pageNo': page, 'pageSize': 100})
         if not d.get('success'):
             raise RuntimeError(d.get('msg'))
-        res = d['data']['resultList'] or []
+        data = d.get('data') or []
+        # 上交返回 {page, resultList} 分页结构，上音返回的直接就是列表
+        res = data if isinstance(data, list) else (data.get('resultList') or [])
         for x in res:
             sd, ed = (x.get('startTime') or '')[:10], (x.get('endTime') or '')[:10]
+            pmin, pmax = x.get('minPrice'), x.get('maxPrice')
             out.append({
-                'oid': f'上海交响乐团音乐厅:{x["id"]}',
+                'oid': f'{venue}:{x["id"]}',
                 'title': x.get('fullCnName') or x.get('cnName'),
-                'venue': x.get('stadiumName') or '上海交响乐团音乐厅',
+                'venue': venue,
                 'start_date': sd, 'end_date': ed or sd, 'start_time': (x.get('startTime') or '')[11:16] or None,
                 'sessions': 1, 'platform_category': x.get('category'),
-                'price_min': x.get('minPrice'),
-                'url': 'https://www.shsymphony.cn/symphonypc/index.html',
+                'price_min': pmin,
+                'price_text': (f'{pmin:g}-{pmax:g}元' if pmin and pmax and pmax != pmin else (f'{pmin:g}元' if pmin else '')),
+                'url': url_of(x['id']),
                 'poster_url': x.get('verticalPoster') or x.get('horizontalPoster'),
             })
-        if page * 100 >= d['data']['page']['rowTotal'] or not res:
+        if isinstance(data, list) or page * 100 >= data['page']['rowTotal'] or not res:
             break
         page += 1
     return [o for o in out if o['start_date'] and o['start_date'] <= end.isoformat()]
+
+
+def fetch_shso(today, end):
+    H = {'Referer': 'https://www.shsymphony.cn/symphonypc/index.html', 'cmpappkey': 'shsymphonyPC', 'lang': 'zh-CN'}
+    return thvendor_programs('https://www.shsymphony.cn/thvendor/symphony/program/homeProgramList.xhtml', H,
+                             {'showSite': 'pcHome'}, '上海交响乐团音乐厅',
+                             lambda k: 'https://www.shsymphony.cn/symphonypc/index.html', end)
+
+
+def fetch_syoh(today, end):
+    H = {'Referer': 'https://www.syoperahouse.com/sytheatre/index.html', 'cmpappkey': 'syoperahouseh5'}
+    return thvendor_programs('https://www.syoperahouse.com/thvendor/ticket/program/getHotProgramList.xhtml', H,
+                             {'showSite': 'pchome'}, '上音歌剧院',
+                             lambda k: f'https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/{k}', end)
+
+
+def fetch_shcs(today, end):
+    req = urllib.request.Request('https://www.shcstheatre.com/Program/programList.aspx', headers={'User-Agent': UA})
+    with urllib.request.urlopen(req, timeout=25) as r:
+        html = r.read().decode('utf-8', 'ignore')
+    out = []
+    # 每个节目一个块：海报 → 标题链接 → 类型/地点/日期/时间/价格
+    for blk in re.split(r"<div class='col-md-12[^']*'>", html)[1:]:
+        m = re.search(r"ProgramDetails\.aspx\?[^']*?id=(\d+)'>([^<]+)</a></h2>", blk)
+        if not m:
+            continue
+        pid, title = m.group(1), m.group(2).strip()
+        field = lambda name: (re.search(name + r"[^：]*：(?:</span><span[^>]*>)?([^<]+)", blk) or [None, ''])[1].strip()
+        dates = re.findall(r'(\d{4})\.(\d{1,2})\.(\d{1,2})', field('日期 Date'))
+        if not dates:
+            continue
+        iso = lambda t: f'{t[0]}-{int(t[1]):02d}-{int(t[2]):02d}'
+        place = field('地点 Venue').replace('&nbsp;', ' ')
+        price = field('价格 Price')
+        pm = re.match(r'(\d+)', price)
+        poster = re.search(r"<img src='(https://pic\.shcstheatre\.com/[^']+)'", blk)
+        out.append({
+            'oid': f'上海文化广场:{pid}', 'title': title,
+            'venue': '上海文化广场' + (' ' + place.replace('上海文化广场', '').strip() if place else ''),
+            'start_date': iso(dates[0]), 'end_date': iso(dates[-1]),
+            'start_time': (field('时间 Time').split(',')[0] or None), 'sessions': 1,
+            'platform_category': field('类型 Category').replace('&nbsp;', ' ').split(' ')[0],
+            'price_min': float(pm.group(1)) if pm else None, 'price_text': price,
+            'url': f'https://www.shcstheatre.com/Program/ProgramDetails.aspx?headtype=YanChu&ARTICLE_ID={pid}&id={pid}',
+            'poster_url': poster.group(1) if poster else None,
+        })
+    if not out:
+        raise RuntimeError('节目列表页没解析出任何节目，页面结构可能变了')
+    return [o for o in out if o['start_date'] <= end.isoformat()]
 
 
 def fetch_shoac(today, end):
@@ -118,7 +179,8 @@ def fetch_shoac(today, end):
     return group_sessions(rows, '上海东方艺术中心', lambda k: 'https://www.shoac.com.cn/#/')
 
 
-FETCHERS = [('上海大剧院', fetch_sgt), ('上海交响乐团音乐厅', fetch_shso), ('上海东方艺术中心', fetch_shoac)]
+FETCHERS = [('上海大剧院', fetch_sgt), ('上海交响乐团音乐厅', fetch_shso), ('上音歌剧院', fetch_syoh),
+            ('上海东方艺术中心', fetch_shoac), ('上海文化广场', fetch_shcs)]
 
 
 def main():
@@ -131,7 +193,7 @@ def main():
             items = [x for x in fn(today, end) if (x['end_date'] or x['start_date']) >= today.isoformat()]
             print(f'{venue}: {len(items)} 个节目')
         except Exception as e:
-            items = [x for x in old if x['venue'] == venue and (x['end_date'] or x['start_date']) >= today.isoformat()]
+            items = [x for x in old if x['oid'].startswith(venue + ':') and (x['end_date'] or x['start_date']) >= today.isoformat()]
             print(f'!! {venue} 抓取失败（{type(e).__name__}: {e}），沿用上次的 {len(items)} 条')
         result += items
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

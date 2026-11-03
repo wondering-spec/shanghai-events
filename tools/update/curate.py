@@ -223,9 +223,21 @@ def main():
             # 官网标题常带「丨上海交响乐团音乐季」这类后缀
             full = re.split(r'[丨｜|]', re.sub(r'[（(][^）)]*[）)]', '', item['title']))[0]
             cores = [c for c in {nk(full), nk(re.split(r'——|：|:', full)[0])} if len(c) >= 5]
-            dup = title_ix.get(nk(item['title'])) or next(
-                (x for t, x in title_ix.items() if any(c in t or t in c for c in cores)
-                 and x.get('venue_canon') == (v['name'] if v else ce['venue'])), None)
+            vname = v['name'] if v else ce['venue']
+            books = set(re.findall(r'《([^》]{2,})》', item['title']))
+            sd, ed = item.get('start_date') or '', item.get('end_date') or item.get('start_date') or ''
+
+            def same_show(x):
+                if x.get('venue_canon') != vname:
+                    return False
+                t = nk(x['title'])
+                if any(c in t or t in c for c in cores):
+                    return True
+                # 书名号里的剧名相同、档期重叠：「法语音乐剧《茶花女》」=「法语原创音乐剧《茶花女》」
+                xb = set(re.findall(r'《([^》]{2,})》', x['title']))
+                return bool(books & xb) and (x.get('start_date') or '') <= ed and sd <= (x.get('end_date') or x.get('start_date') or '')
+
+            dup = title_ix.get(nk(item['title'])) or next((x for x in title_ix.values() if same_show(x)), None)
             if dup:   # 平台上已经有：只补官方链接
                 dup.setdefault('tickets', {})['official'] = item.get('url')
                 merged_official += 1
