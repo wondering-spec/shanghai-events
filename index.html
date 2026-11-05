@@ -872,53 +872,54 @@ mark.hl { background: var(--wine-soft); color: var(--wine); padding: 0 1px; }
 
 /* ---------- 详情（右侧面板 / 手机底部抽屉） ---------- */
 .modal-mask.on { opacity: 1; pointer-events: auto; }
-.modal { position: fixed; top: 0; right: 0; bottom: 0; width: min(540px, 100%); background: var(--paper); overflow-y: auto; transform: translateX(100%); transition: transform .3s; border-left: 1px solid var(--ink); }
+.modal { position: fixed; top: 0; right: 0; bottom: 0; width: min(520px, 100%); background: var(--paper); overflow-y: auto; transform: translateX(100%); transition: transform .3s; border-left: 1px solid var(--ink); padding-bottom: 28px; }
 .modal-mask.on .modal { transform: none; }
-.modal-hero { position: relative; background: var(--ink); min-height: 56px; }
-.modal-hero-img { width: 100%; max-height: 460px; object-fit: contain; display: block; margin: 0 auto; background: var(--ink); }
-.modal-close { all: unset; cursor: pointer; position: absolute; right: 14px; top: 12px; width: 34px; height: 34px; border-radius: 50%; background: rgba(250, 246, 239, .92); text-align: center; font: 400 24px/33px var(--sans); color: var(--ink); }
-.modal-in { padding: 24px 30px 44px; }
-.modal-in h2 { font: 900 25px/1.38 var(--serif); }
-.dt-cat-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 10px 0 18px; font-size: 12px; letter-spacing: .1em; }
-.card-cat { color: var(--wine); }
-.grade-badge { color: var(--ink-3); letter-spacing: .02em; }
-.grade-badge.g-s { color: var(--gold); }
-.status-tag { color: var(--ok); letter-spacing: .02em; }
-.modal-rows { border-top: 1px solid var(--ink); padding-top: 14px; display: grid; gap: 9px; font-size: 14px; }
-.mrow { display: grid; grid-template-columns: 70px 1fr; gap: 10px; }
-.mrow .k { font: 700 13px var(--serif); color: var(--ink-2); }
-.span-note { font-style: normal; color: var(--ink-3); font-size: 12px; margin-left: 4px; }
-.dt-section { margin-top: 24px; }
-.dt-section h4, .commute-box .head, .tk-title { font: 700 15px var(--serif); padding-bottom: 8px; border-bottom: 1px solid var(--rule); margin-bottom: 10px; }
-.dt-points { display: flex; flex-wrap: wrap; gap: 6px; }
-.dt-point { font-size: 12px; padding: 3px 9px; background: var(--paper-2); color: var(--ink-2); }
-.dt-point b { color: var(--ink); font-weight: 500; }
-.dt-why { padding-left: 18px; font-size: 13px; color: var(--ink-2); }
-.commute-box { margin-top: 24px; }
-.commute-box .line { display: grid; grid-template-columns: 44px 1fr; gap: 10px; font-size: 13px; }
-.commute-box .from { color: var(--wine); font-weight: 500; }
-.ticket-box { margin-top: 24px; }
-.tk-kw { font: 400 12px var(--sans); color: var(--ink-3); margin-left: 8px; }
-.tk-damai { display: flex; align-items: center; gap: 12px; background: var(--wine); color: #fff; padding: 12px 16px; text-decoration: none; }
-.tk-damai:hover { background: var(--wine-2); }
-.tkd-ic { display: none; }
-.tkd-main { flex: 1; display: flex; flex-direction: column; }
-.tkd-t { font: 700 15px var(--serif); }
-.tkd-s { font-size: 12px; opacity: .85; }
-.tkd-go { font-size: 22px; }
-.tk-callout { font-size: 12px; color: var(--ink-3); margin: 8px 0; display: flex; gap: 6px; }
-.tk-sub { display: flex; flex-wrap: wrap; gap: 8px; }
-.tk-sub a { font-size: 13px; padding: 6px 12px; border: 1px solid var(--ink); text-decoration: none; }
-.tk-sub a:hover { background: var(--ink); color: var(--paper); }
-.tk-tip { font-size: 12px; color: var(--ink-3); margin-top: 8px; }
-.dt-similar { display: grid; gap: 10px; }
-.dt-sim-item { display: grid; grid-template-columns: 46px 1fr auto; gap: 12px; align-items: center; cursor: pointer; }
-.dt-sim-item img, .sim-no { width: 46px; height: 62px; object-fit: cover; background: var(--paper-2); display: flex; align-items: center; justify-content: center; color: var(--rule-2); }
-.dt-sim-main { display: flex; flex-direction: column; min-width: 0; }
-.dt-sim-t { font: 700 14px/1.4 var(--serif); }
-.dt-sim-item:hover .dt-sim-t { color: var(--wine); }
-.dt-sim-m { font-size: 12px; color: var(--ink-3); }
-.dt-sim-score { font: 400 15px var(--num); color: var(--gold); }
+.modal-close { all: unset; cursor: pointer; position: absolute; right: 14px; top: 12px; z-index: 2; width: 32px; height: 32px; border-radius: 50%; text-align: center; font: 400 24px/31px var(--sans); color: var(--ink-2); }
+.modal-close:hover { background: var(--paper-2); color: var(--ink); }
+.dt-head { display: grid; grid-template-columns: 132px 1fr; gap: 20px; padding: 28px 28px 22px; }
+.dt-poster { width: 132px; aspect-ratio: 3 / 4; background: var(--paper-2); overflow: hidden; box-shadow: 0 1px 0 var(--rule); }
+.dt-poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.dt-poster.none img { display: none; }
+.dt-head-txt { min-width: 0; padding-right: 26px; }
+.dt-kick { display: flex; gap: 8px; flex-wrap: wrap; font-size: 12px; letter-spacing: .1em; color: var(--wine); }
+.dt-kick .lv { color: var(--gold); letter-spacing: .02em; }
+.dt-kick .live { color: var(--ok); letter-spacing: .02em; }
+.dt-head h2 { font: 900 22px/1.38 var(--serif); margin: 8px 0 8px; }
+.dt-venue { font-size: 14px; color: var(--ink-2); }
+.dt-why { font-size: 12px; color: var(--gold); margin-top: 6px; }
+.dt-facts { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0 28px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.dt-facts > div { padding: 12px 10px 12px 0; display: flex; flex-direction: column; min-width: 0; }
+.dt-facts > div + div { padding-left: 14px; border-left: 1px solid var(--rule); }
+.dt-facts .k { font-size: 12px; color: var(--ink-3); letter-spacing: .1em; }
+.dt-facts b { font: 400 19px/1.3 var(--num); color: var(--ink); margin: 3px 0 1px; overflow-wrap: anywhere; }
+.dt-facts small { font-size: 12px; color: var(--ink-3); }
+.dt-tickets { padding: 18px 28px 4px; }
+.dt-buy { display: flex; align-items: center; justify-content: space-between; background: var(--wine); color: #fff; text-decoration: none; padding: 12px 16px; font: 700 15px var(--serif); letter-spacing: .06em; }
+.dt-buy:hover { background: var(--wine-2); }
+.dt-buy i { font-style: normal; font-size: 20px; line-height: 1; }
+.dt-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 10px; font-size: 13px; }
+.dt-links a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--rule-2); text-underline-offset: 4px; }
+.dt-links a:hover { color: var(--wine); text-decoration-color: var(--wine); }
+.dt-hint { font-size: 12px; color: var(--ink-3); margin-top: 6px; }
+.dt-sec { margin: 22px 28px 0; }
+.dt-sec h4 { font: 700 14px var(--serif); letter-spacing: .1em; color: var(--ink-2); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.dt-sec h4::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.dt-route { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 14px; }
+.dt-route .st { font: 700 15px var(--serif); }
+.dt-route .ln { font-size: 12px; padding: 1px 8px; border: 1px solid var(--wine); color: var(--wine); border-radius: 999px; }
+.dt-route .arr { color: var(--ink-3); }
+.dt-sub { font-size: 13px; color: var(--ink-2); margin-top: 6px; }
+.dt-pts { font-size: 14px; color: var(--ink); }
+.dt-pts i { font-style: normal; color: var(--ink-3); margin: 0 8px; }
+.dt-sims { display: grid; gap: 12px; }
+.dt-sim { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; cursor: pointer; }
+.dt-sim .th { width: 44px; height: 58px; background: var(--paper-2); overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--rule-2); }
+.dt-sim .th img { width: 100%; height: 100%; object-fit: cover; }
+.dt-sim .tx { display: flex; flex-direction: column; min-width: 0; }
+.dt-sim b { font: 700 14px/1.4 var(--serif); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dt-sim small { font-size: 12px; color: var(--ink-3); }
+.dt-sim:hover b { color: var(--wine); }
+.dt-note { margin: 24px 28px 0; font-size: 12px; color: var(--ink-3); }
 
 /* ---------- 页脚 ---------- */
 .colophon { text-align: center; padding: 46px 0 64px; font-size: 12px; color: var(--ink-3); }
@@ -955,10 +956,15 @@ mark.hl { background: var(--wine-soft); color: var(--wine); padding: 0 1px; }
   .cal-ongoing.dim { display: none; }
   .cal-legend { flex-wrap: wrap; gap: 6px 14px; }
   #map { height: 62vh; }
-  .modal { top: auto; height: 92%; width: 100%; transform: translateY(100%); border-left: none; border-top: 1px solid var(--ink); }
-  .modal-hero-img { max-height: 300px; }
-  .modal-in { padding: 20px 18px 40px; }
-  .modal-in h2 { font-size: 21px; }
+  .modal { top: auto; height: 90%; width: 100%; transform: translateY(100%); border-left: none; border-top: 1px solid var(--ink); }
+  .dt-head { grid-template-columns: 96px 1fr; gap: 14px; padding: 22px 16px 18px; }
+  .dt-poster { width: 96px; }
+  .dt-head h2 { font-size: 18px; }
+  .dt-facts { margin: 0 16px; }
+  .dt-facts > div + div { padding-left: 10px; }
+  .dt-facts b { font-size: 16px; }
+  .dt-tickets { padding: 16px 16px 4px; }
+  .dt-sec, .dt-note { margin-left: 16px; margin-right: 16px; }
   .drawer { width: 100%; }
 }
 
@@ -2156,154 +2162,118 @@ function openDetail(id) {
   const ev = DATA.events.find(e => String(e.id) === String(id));
   if (!ev) return;
   const c = getCommute(ev);
-  const { score, reasons } = scoreEvent(ev);
-
+  const { reasons } = scoreEvent(ev);
   const originName = state.origin === "custom" ? (state.customPlace ? state.customPlace.name : "当前位置")
     : (c && c.from_key === "school" ? "学校" : (c && c.from_key === "home" ? "家" : "出发地"));
 
-  let commuteHTML = "";
-  if (c) {
-    commuteHTML = `<div class="commute-box">
-      <div class="head">从「${esc(originName)}」出发</div>
-      <div class="line best"><span class="from">${c.mode === "地铁" ? "地铁" : c.mode}</span><span class="txt">${esc(c.detail)}</span></div>
-    </div>`;
-  } else {
-    commuteHTML = `<div class="commute-box">
-      <div class="head">通勤方案</div>
-      <div class="line"><span class="from">提示</span><span class="txt">该地点附近无地铁站，建议改用其他出发点或导航查询</span></div>
-    </div>`;
-  }
-
-  // 时间状态
+  // 头部：小海报 + 类别 / 标题 / 场馆
   const isLong = ev.start_date && ev.end_date && ev.start_date !== ev.end_date;
   const ongoing = isLong && daysUntil(ev.start_date) < 0 && daysUntil(ev.end_date) >= 0;
-  const timeTxt = esc(ev.date_raw || fmtDate(ev.start_date) || "时间待定");
-  const gradeBadge = ev.venue_grade === "S" ? `<span class="grade-badge g-s">旗舰 · ${esc(ev.venue_level || "大型场馆")}</span>`
-    : `<span class="grade-badge g-a">${esc(ev.venue_level || "专业场馆")}</span>`;
-
-  // 演出看点
-  const pts = buildHighlights(ev);
-  const ptsHTML = pts.length
-    ? `<div class="dt-section"><h4>演出看点</h4><div class="dt-points">${
-        pts.map(p => `<span class="dt-point">${esc(p.k)} · <b>${esc(p.v)}</b></span>`).join("")
-      }</div></div>`
-    : "";
-
-  // 推荐理由
-  const whyHTML = reasons.length
-    ? `<div class="dt-section"><h4>为什么推荐给你</h4><ul class="dt-why">${
-        reasons.map(r => `<li>${esc(r)}</li>`).join("")
-      }</ul></div>`
-    : "";
-
-  // 相似推荐（按推荐度）
-  const sims = similarEvents(ev, 3);
-  const simHTML = sims.length
-    ? `<div class="dt-section"><h4>相似的演出 · 按推荐度</h4><div class="dt-similar">${
-        sims.map(({ ev: e, score: s }) => {
-          const p = posterUrl(e);
-          return `<div class="dt-sim-item" data-sim="${e.id}">
-            ${p ? `<img src="${p}" loading="lazy" decoding="async" alt="" onerror="this.style.display='none'">` : `<span class="sim-no">◆</span>`}
-            <span class="dt-sim-main">
-              <span class="dt-sim-t">${esc(e.title)}</span>
-              <span class="dt-sim-m">${esc(e.date_raw || fmtDate(e.start_date) || "时间待定")} · ${esc(cleanVenue(e.venue) || "场馆待定")}</span>
-            </span>
-            <span class="dt-sim-score">${s} 分</span>
-          </div>`;
-        }).join("")
-      }</div></div>`
-    : "";
-
+  const lv = ev.venue_grade === "S" ? "旗舰场馆" : (ev.venue_level || "专业场馆");
+  const venueName = ev.venue_canon || cleanVenue(ev.venue) || "场馆待定";
+  const why = (reasons || []).find(r => !r.startsWith("属于你勾选"));
   const _mp = posterUrl(ev);
-  const heroImg = _mp ? `<img class="modal-hero-img" src="${_mp}" decoding="async" alt="" onerror="this.style.display='none'">` : "";
 
-  const html = `<div class="modal-hero">
-      ${heroImg}
-      <button class="modal-close" onclick="closeDetail()">×</button>
+  // 三个关键信息：日期 / 票价 / 通勤
+  const f = k => { const d = new Date(k + "T00:00:00"); return `${d.getMonth() + 1}.${String(d.getDate()).padStart(2, "0")}`; };
+  const t = ev.start_time && ev.start_time !== "00:00" ? ev.start_time : "";
+  let dateBig, dateSmall;
+  if (!ev.start_date) { dateBig = "待定"; dateSmall = ""; }
+  else if (!isLong) { dateBig = `${f(ev.start_date)} 周${weekdayShort(new Date(ev.start_date + "T00:00:00"))}`; dateSmall = t ? `${t} 开演` : ""; }
+  else if (ev.category === "艺术展览") { dateBig = ongoing ? `展至 ${f(ev.end_date)}` : `${f(ev.start_date)} – ${f(ev.end_date)}`; dateSmall = ongoing ? "正在展出" : "展期"; }
+  else { dateBig = `${f(ev.start_date)} – ${f(ev.end_date)}`; dateSmall = [t && `${t} 开演`, ongoing && "正在上演"].filter(Boolean).join(" · "); }
+  const priceBig = ev.is_free ? "免费" : (ev.price_text || "待公布");
+  const commuteBig = c && c.minutes ? `${c.minutes} 分钟` : "—";
+  const commuteSmall = c && c.minutes ? `从${originName}出发` : "附近没有地铁站";
+
+  // 怎么去：把一句话的路线拆成「站 → 线 → 站」
+  let routeHTML = "";
+  if (c && c.lines && c.lines.length) {
+    routeHTML = `<div class="dt-route">
+        <span class="st">${esc(c.from_station)}</span>
+        ${c.lines.map(l => `<span class="ln">${esc(l)}</span>`).join(`<span class="arr">→</span>`)}
+        <span class="st">${esc(c.to_station)}</span>
+      </div>
+      <p class="dt-sub">${c.transfers ? `换乘 ${c.transfers} 次 · ` : "直达 · "}约 ${c.minutes} 分钟，含步行</p>`;
+  } else if (c) {
+    routeHTML = `<p class="dt-sub">${esc(c.detail)}</p>`;
+  } else {
+    routeHTML = `<p class="dt-sub">附近没有地铁站，建议用导航查询</p>`;
+  }
+  const addr = ev.address || cleanVenue(ev.venue).replace(venueName, "").trim();
+
+  // 看点：只留标题里看不出来的（演出方、首演/巡演/名家等）
+  const pts = buildHighlights(ev).filter(p => p.k === "演出方" || p.k === "亮点").map(p => p.v);
+
+  // 同类推荐
+  const sims = similarEvents(ev, 3);
+  const simHTML = sims.length ? `<section class="dt-sec"><h4>同类推荐</h4><div class="dt-sims">${
+    sims.map(({ ev: e }) => {
+      const p = posterUrl(e);
+      return `<div class="dt-sim" data-sim="${e.id}">
+        <span class="th">${p ? `<img src="${p}" loading="lazy" alt="" onerror="this.style.display='none'">` : "◆"}</span>
+        <span class="tx"><b>${esc(displayTitle(e.title))}</b><small>${esc(rowDate(e))} · ${esc(e.venue_canon || cleanVenue(e.venue))}</small></span>
+      </div>`;
+    }).join("")}</div></section>` : "";
+
+  const html = `
+    <button class="modal-close" onclick="closeDetail()" aria-label="关闭">×</button>
+    <header class="dt-head">
+      <div class="dt-poster">${_mp ? `<img src="${_mp}" alt="" onerror="this.parentNode.classList.add('none')">` : ""}</div>
+      <div class="dt-head-txt">
+        <div class="dt-kick"><span>${esc(ev.category)}</span><span class="lv">${esc(lv)}</span>${ongoing ? `<span class="live">进行中</span>` : ""}</div>
+        <h2>${esc(ev.title)}</h2>
+        <div class="dt-venue">${esc(venueName)}${ev.district ? " · " + esc(ev.district) : ""}</div>
+        ${why ? `<div class="dt-why">${esc(why)}</div>` : ""}
+      </div>
+    </header>
+    <div class="dt-facts">
+      <div><span class="k">日期</span><b>${esc(dateBig)}</b><small>${esc(dateSmall)}</small></div>
+      <div><span class="k">票价</span><b>${esc(priceBig)}</b><small>${ev.is_free ? "可能需预约" : "最低票价"}</small></div>
+      <div><span class="k">通勤</span><b>${esc(commuteBig)}</b><small>${esc(commuteSmall)}</small></div>
     </div>
-    <div class="modal-in">
-      <h2>${esc(ev.title)}</h2>
-      <div class="dt-cat-row">
-        <span class="card-cat">${ev.category}</span>
-        ${gradeBadge}
-        ${ongoing ? `<span class="status-tag on">进行中</span>` : ""}
-      </div>
-      <div class="modal-rows">
-        <div class="mrow"><span class="k">时间</span><span class="v">${timeTxt}${isLong ? ` <em class="span-note">展期至 ${fmtShort(ev.end_date)}</em>` : ""}</span></div>
-        <div class="mrow"><span class="k">场馆</span><span class="v">${esc(cleanVenue(ev.venue) || "待定")}</span></div>
-        ${ev.address ? `<div class="mrow"><span class="k">地址</span><span class="v">${esc(ev.address)}${ev.district ? " · " + esc(ev.district) : ""}</span></div>` : ""}
-        ${ev.nearest_metro ? `<div class="mrow"><span class="k">最近地铁</span><span class="v">${esc(ev.nearest_metro)}${(ev.metro_lines || []).length ? "（" + esc((ev.metro_lines || []).join("、")) + "）" : ""}</span></div>` : ""}
-        <div class="mrow"><span class="k">推荐分</span><span class="v"><b style="color:var(--wine)">${score}</b></span></div>
-      </div>
-      ${ptsHTML}
-      ${commuteHTML}
-      ${ticketHTML(ev)}
-      ${whyHTML}
-      ${simHTML}
-    </div>`;
+    ${ticketHTML(ev)}
+    <section class="dt-sec"><h4>怎么去</h4>${routeHTML}
+      ${addr ? `<p class="dt-sub">地址：${esc(addr)}</p>` : ""}</section>
+    ${pts.length ? `<section class="dt-sec"><h4>看点</h4><p class="dt-pts">${pts.map(esc).join("<i>·</i>")}</p></section>` : ""}
+    ${simHTML}
+    <p class="dt-note">时间、票价以官方和售票平台为准。</p>`;
 
   const mask = document.getElementById("modal-mask");
   const modalEl = mask.querySelector(".modal");
   modalEl.innerHTML = html;
-  modalEl.querySelectorAll("[data-sim]").forEach(el => {
-    el.addEventListener("click", () => openDetail(el.dataset.sim));
-  });
+  modalEl.querySelectorAll("[data-sim]").forEach(el => el.addEventListener("click", () => openDetail(el.dataset.sim)));
   mask.classList.add("on");
   modalEl.scrollTop = 0;
 }
 function closeDetail() { document.getElementById("modal-mask").classList.remove("on"); }
 
 // ---------------- 购票入口 ----------------
-// 策略：主推大麦（移动端链接在手机上可直接唤起大麦 App），移除已失效的猫眼条目直链
+// 主按钮：大麦（手机上会唤起大麦 App）；其余入口压成一行文字链接
 function isMobileUA() {
   return /Android|iPhone|iPad|iPod|HarmonyOS|Mobile/i.test(navigator.userAgent || "");
 }
 
 function ticketHTML(ev) {
   const t = ev.tickets || {};
-  const kw = t.search_kw || ev.title || "";
-  const q = encodeURIComponent(kw);
-  const isFree = ev.is_free;
-  const mobile = isMobileUA();
-
-  // 大麦：移动端 H5 在手机上会唤起「大麦」App（安卓 App Links 全站覆盖）；桌面端用 PC 页
-  const damaiMobile = `https://m.damai.cn/shows/search.html?keyword=${q}`;
-  const damaiPC = `https://search.damai.cn/search.htm?keyword=${q}`;
-  const damai = mobile ? damaiMobile : damaiPC;
-
-  // 次要入口（均为长期有效的列表页 / 搜索页，不会出现「找不到该商品」）
+  const q = encodeURIComponent(t.search_kw || ev.title || "");
+  const damai = isMobileUA() ? `https://m.damai.cn/shows/search.html?keyword=${q}` : `https://search.damai.cn/search.htm?keyword=${q}`;
   const dbUrl = t.db || (ev.source === "douban" ? ev.url : "") || "";
-  const maoyanShow = "https://show.maoyan.com/";
   const bing = t.bing || `https://cn.bing.com/search?q=${encodeURIComponent((ev.title || "") + " 上海 演出 购票")}`;
   const nav = t.nav || `https://uri.amap.com/search?keyword=${encodeURIComponent(cleanVenue(ev.venue) || "")}&city=%E4%B8%8A%E6%B5%B7`;
-
-  const subLinks = [];
-  if (t.official) subLinks.push(`<a href="${t.official}" target="_blank" rel="noopener">官方信息/来源</a>`);
-  if (dbUrl) subLinks.push(`<a href="${dbUrl}" target="_blank" rel="noopener">豆瓣活动页</a>`);
-  subLinks.push(`<a href="${maoyanShow}" target="_blank" rel="noopener">猫眼演出</a>`);
-  subLinks.push(`<a href="${bing}" target="_blank" rel="noopener">全网搜购票</a>`);
-  subLinks.push(`<a href="${nav}" target="_blank" rel="noopener">场馆导航</a>`);
-
-  const callout = mobile
-    ? `<div class="tk-callout"><span class="ck">📱</span><span>手机上点击会自动打开<b>大麦 App</b>；未安装则进入大麦网页版，可搜到同名演出并购票。</span></div>`
-    : `<div class="tk-callout"><span class="ck">💡</span><span>大麦是演出票务主渠道；手机上打开可唤起大麦 App，电脑端可查看同名演出的在售场次。</span></div>`;
-
-  return `
-    <div class="ticket-box">
-      <div class="tk-title">${isFree ? "预约 / 查看详情" : "购票入口"}
-        <span class="tk-kw">大麦搜索词「${esc(kw)}」</span>
-      </div>
-      <a class="tk-damai" href="${damai}" target="_blank" rel="noopener">
-        <span class="tkd-ic">🎫</span>
-        <span class="tkd-main">
-          <span class="tkd-t">去大麦看这个演出</span>
-          <span class="tkd-s">查看在售场次 · 选座下单${mobile ? " · 可直接唤起大麦 App" : ""}</span>
-        </span>
-        <span class="tkd-go">›</span>
-      </a>
-      ${callout}
-      <div class="tk-sub">${subLinks.join("")}</div>
-      <div class="tk-tip">若大麦搜索无结果，可能尚未开票或只在主办方渠道售票；点「全网搜购票」可找到官方入口。</div>
+  const links = [
+    t.official && [t.official, "官方信息"],
+    dbUrl && [dbUrl, "豆瓣"],
+    ["https://show.maoyan.com/", "猫眼"],
+    [bing, "全网搜票"],
+    [nav, "导航"],
+  ].filter(Boolean);
+  const main = ev.is_free && t.official
+    ? `<a class="dt-buy" href="${t.official}" target="_blank" rel="noopener"><span>查看详情 / 预约</span><i>›</i></a>`
+    : `<a class="dt-buy" href="${damai}" target="_blank" rel="noopener"><span>去大麦选座购票</span><i>›</i></a>`;
+  return `<div class="dt-tickets">${main}
+      <div class="dt-links">${links.map(([u, n]) => `<a href="${u}" target="_blank" rel="noopener">${n}</a>`).join("")}</div>
+      <p class="dt-hint">大麦搜不到时，可能还没开票或只在主办方渠道卖，点「全网搜票」找官方入口。</p>
     </div>`;
 }
 
