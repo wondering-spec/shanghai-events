@@ -40,6 +40,11 @@ python3 dl_maoyan_posters.py
 python3 dedupe_final.py
 ```
 
+## 快速更新（周中补新上架）
+
+`bash tools/update/weekly.sh --quick` 只跑猫眼 + 场馆官网 + 去重 + 策展（约 3 分钟），豆瓣条目原样保留。
+猫眼两天能新上架几十场（2026-11-03 → 11-05：1069 → 1122），只靠每周一次全量会让新演出晚最多 7 天出现。
+
 ## 豆瓣抓取时长上限
 
 `db_crawl.py` 默认最多抓 20 分钟（环境变量 `DB_CRAWL_MAX_MIN` 可改），连续 8 页失败也直接收工。

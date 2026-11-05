@@ -1,7 +1,8 @@
 #!/bin/bash
 # 上海文娱速递 —— 每周自动更新 + 发布到 GitHub Pages
 #
-# 用法：bash tools/update/weekly.sh
+# 用法：bash tools/update/weekly.sh          全量（豆瓣 + 猫眼 + 官网，约 30 分钟）
+#      bash tools/update/weekly.sh --quick  快速（猫眼 + 官网，约 3 分钟，适合周中补新上架）
 #
 # 流程：update.sh 全量更新 → 质量检查（不通过就回滚、不发布）→ git commit → git push
 # 日志：logs/weekly-YYYYMMDD.log
@@ -17,7 +18,8 @@ exec > >(tee -a "$LOG") 2>&1
 echo "== 每周更新开始 $(date '+%Y-%m-%d %H:%M:%S')"
 cp index.html /tmp/se_index_before_weekly.html
 
-bash "$HERE/update.sh"
+MODE=full; [ "${1:-}" = "--quick" ] && MODE=quick
+if [ "$MODE" = quick ]; then bash "$HERE/quick.sh"; else bash "$HERE/update.sh"; fi
 
 # 质量检查：条数不能骤降、无过期活动、家庭位置不能出现精确地址
 python3 -I - "$SITE/index.html" /tmp/se_index_before_weekly.html <<'PYEOF'
@@ -59,7 +61,7 @@ git add -A index.html posters tools data
 if git diff --cached --quiet; then
   echo "== 无变化，不提交"
 else
-  git commit -q -m "数据更新 $(date '+%Y-%m-%d')"
+  git commit -q -m "数据更新 $(date '+%Y-%m-%d')$([ "$MODE" = quick ] && echo '（快速）')"
   git push -q origin main && echo "== 已推送到 GitHub" || { echo "!! 推送失败"; exit 1; }
 fi
 echo "== 结束 $(date '+%Y-%m-%d %H:%M:%S')"
