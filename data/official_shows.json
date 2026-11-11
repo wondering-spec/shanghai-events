@@ -508,6 +508,20 @@
   "poster_url": "https://img2.shsymphony.cn/pic/theatre/b5a2469860f18ddf.jpg"
  },
  {
+  "oid": "上海交响乐团音乐厅:21770",
+  "title": "水蓝、卡瓦科斯与上海交响乐团演绎巴托克与霍尔斯特《行星组曲》丨上海交响乐团音乐季",
+  "venue": "上海交响乐团音乐厅",
+  "start_date": "2027-03-12",
+  "end_date": "2027-03-12",
+  "start_time": "19:30",
+  "sessions": 1,
+  "platform_category": "交响乐",
+  "price_min": null,
+  "price_text": "",
+  "url": "https://www.shsymphony.cn/symphonypc/index.html",
+  "poster_url": "https://img2.shsymphony.cn/pic/theatre/97c57130b9a1d13a.jpg"
+ },
+ {
   "oid": "上音歌剧院:22190",
   "title": "2026声动击喜合唱团（秋季班）",
   "venue": "上音歌剧院",
@@ -863,10 +877,10 @@
   "oid": "上海东方艺术中心:9855400",
   "title": "第二十五届中国上海国际艺术节参演剧目-俄罗斯瓦赫坦戈夫剧院 话剧《莫扎特传》",
   "venue": "上海东方艺术中心",
-  "start_date": "2026-11-11",
+  "start_date": "2026-11-12",
   "end_date": "2026-11-12",
   "start_time": "19:15",
-  "sessions": 2,
+  "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
  },
@@ -1058,17 +1072,6 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:10011100",
-  "title": "《坂本龙一&久石让》经典作品音乐会",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-12-25",
-  "end_date": "2026-12-25",
-  "start_time": "19:45",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
   "oid": "上海东方艺术中心:9793900",
   "title": "俄罗斯鞑靼国家模范剧院芭蕾舞剧《胡桃夹子》交响乐团现场伴奏版",
   "venue": "上海东方艺术中心",
@@ -1076,6 +1079,17 @@
   "end_date": "2026-12-25",
   "start_time": "19:15",
   "sessions": 2,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
+  "oid": "上海东方艺术中心:10011100",
+  "title": "《坂本龙一&久石让》经典作品音乐会",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-12-25",
+  "end_date": "2026-12-25",
+  "start_time": "19:45",
+  "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
  },
@@ -1102,17 +1116,6 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:9985800",
-  "title": "2027上海儿童新年音乐会（交响演唱版）",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-12-27",
-  "end_date": "2026-12-27",
-  "start_time": "14:00",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
   "oid": "上海东方艺术中心:9825700",
   "title": "俄罗斯鞑靼国家模范剧院芭蕾舞剧《舞姬》交响乐团现场伴奏版",
   "venue": "上海东方艺术中心",
@@ -1120,6 +1123,17 @@
   "end_date": "2026-12-27",
   "start_time": "14:00",
   "sessions": 2,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
+  "oid": "上海东方艺术中心:9985800",
+  "title": "2027上海儿童新年音乐会（交响演唱版）",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-12-27",
+  "end_date": "2026-12-27",
+  "start_time": "14:00",
+  "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
  },
@@ -1190,23 +1204,23 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:10126800",
-  "title": "春花秋月与浪漫小径  中法声乐作品专场音乐会",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-12-12",
-  "end_date": "2026-12-12",
-  "start_time": "19:45",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
   "oid": "上海东方艺术中心:9465200",
   "title": "萧秉治 Xiao Bing Chih《活着 Alive》巡回演唱会－上海站 「无限奇迹版」",
   "venue": "上海东方艺术中心",
   "start_date": "2026-12-12",
   "end_date": "2026-12-12",
   "start_time": "19:15",
+  "sessions": 1,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
+  "oid": "上海东方艺术中心:10126800",
+  "title": "春花秋月与浪漫小径  中法声乐作品专场音乐会",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-12-12",
+  "end_date": "2026-12-12",
+  "start_time": "19:45",
   "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null

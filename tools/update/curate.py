@@ -183,6 +183,8 @@ def main():
         lab = labels.get(str(e['id']), {})
         if lab.get('drop'):
             dropped['复核剔除'].append(e); continue
+        if (e.get('end_date') or e.get('start_date') or '9999') < today:
+            dropped['已过期'].append(e); continue
         v = vidx.match(e.get('venue'), e.get('address'), e.get('venue_canon'))
         if not v and not lab.get('category'):
             unmatched[e.get('venue_canon') or e.get('venue')] += 1
