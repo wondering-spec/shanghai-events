@@ -1,909 +1,919 @@
 {
- "_说明": "场馆白名单。只有命中这里的场馆的活动才会出现在网站上。tier: S=大型/旗舰, A=专业中型/美术馆/知名 Livehouse。type 决定徽章文字和分类先验。patterns 是在「场馆+地址」里做子串匹配的关键词（任一命中即可），尽量写得具体，避免误命中。lat/lng 只在策展清单（展览/大型演出）需要坐标时使用，GCJ02。",
- "types": {
-  "theatre": "专业剧院",
-  "concert_hall": "音乐厅",
-  "arena": "体育馆/大型场馆",
-  "museum": "美术馆/博物馆",
-  "expo": "展览中心",
-  "livehouse": "Livehouse"
- },
- "venues": [
-  {
-   "name": "上海大剧院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "上海大剧院"
-   ]
-  },
-  {
-   "name": "上海东方艺术中心",
-   "tier": "S",
-   "type": "concert_hall",
-   "patterns": [
-    "东方艺术中心"
-   ]
-  },
-  {
-   "name": "上海交响乐团音乐厅",
-   "tier": "S",
-   "type": "concert_hall",
-   "patterns": [
-    "上海交响乐团音乐厅",
-    "上交音乐厅"
-   ]
-  },
-  {
-   "name": "上海音乐厅",
-   "tier": "S",
-   "type": "concert_hall",
-   "patterns": [
-    "上海音乐厅"
-   ]
-  },
-  {
-   "name": "上海文化广场",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "上海文化广场"
-   ]
-  },
-  {
-   "name": "上海保利大剧院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "上海保利大剧院"
-   ]
-  },
-  {
-   "name": "上海大歌剧院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "上海大歌剧院"
-   ]
-  },
-  {
-   "name": "上音歌剧院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "上音歌剧院"
-   ]
-  },
-  {
-   "name": "上海西岸大剧院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "西岸大剧院"
-   ]
-  },
-  {
-   "name": "九棵树（上海）未来艺术中心",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "九棵树"
-   ]
-  },
-  {
-   "name": "美琪大戏院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "美琪大戏院"
-   ]
-  },
-  {
-   "name": "上海国际舞蹈中心",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "国际舞蹈中心"
-   ]
-  },
-  {
-   "name": "上海话剧艺术中心",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "上海话剧艺术中心",
-    "话剧艺术中心"
-   ]
-  },
-  {
-   "name": "北外滩友邦大剧院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "友邦大剧院"
-   ]
-  },
-  {
-   "name": "天蟾逸夫舞台",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "天蟾逸夫舞台",
-    "逸夫舞台"
-   ]
-  },
-  {
-   "name": "兰心大戏院",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "兰心大戏院"
-   ]
-  },
-  {
-   "name": "星在文化中心",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "星在文化中心"
-   ]
-  },
-  {
-   "name": "梅赛德斯-奔驰文化中心",
-   "tier": "S",
-   "type": "arena",
-   "patterns": [
-    "梅赛德斯",
-    "奔驰文化中心"
-   ],
-   "lat": 31.1885,
-   "lng": 121.4934
-  },
-  {
-   "name": "上海体育场",
-   "tier": "S",
-   "type": "arena",
-   "patterns": [
-    "上海体育场"
-   ],
-   "lat": 31.1815,
-   "lng": 121.442
-  },
-  {
-   "name": "上海体育馆",
-   "tier": "S",
-   "type": "arena",
-   "patterns": [
-    "上海体育馆",
-    "上海大舞台"
-   ],
-   "lat": 31.1814,
-   "lng": 121.4383
-  },
-  {
-   "name": "东方体育中心",
-   "tier": "S",
-   "type": "arena",
-   "patterns": [
-    "东方体育中心"
-   ],
-   "lat": 31.1525,
-   "lng": 121.4794
-  },
-  {
-   "name": "国家会展中心（上海）",
-   "tier": "S",
-   "type": "arena",
-   "patterns": [
-    "国家会展中心"
-   ],
-   "lat": 31.1897,
-   "lng": 121.302
-  },
-  {
-   "name": "交通银行前滩31演艺中心",
-   "tier": "S",
-   "type": "theatre",
-   "patterns": [
-    "前滩31"
-   ],
-   "lat": 31.1551,
-   "lng": 121.4806
-  },
-  {
-   "name": "上海国际体操中心",
-   "tier": "S",
-   "type": "arena",
-   "patterns": [
-    "国际体操中心"
-   ],
-   "lat": 31.1834,
-   "lng": 121.4167
-  },
-  {
-   "name": "旗忠森林体育城网球中心",
-   "tier": "S",
-   "type": "arena",
-   "patterns": [
-    "旗忠"
-   ],
-   "lat": 31.0436,
-   "lng": 121.3604
-  },
-  {
-   "name": "上海静安体育中心",
-   "tier": "A",
-   "type": "arena",
-   "patterns": [
-    "静安体育中心"
-   ]
-  },
-  {
-   "name": "上海博物馆",
-   "tier": "S",
-   "type": "museum",
-   "patterns": [
-    "上海博物馆"
-   ],
-   "lat": 31.2287,
-   "lng": 121.4757
-  },
-  {
-   "name": "上海博物馆东馆",
-   "tier": "S",
-   "type": "museum",
-   "patterns": [
-    "上海博物馆东馆",
-    "上海博物馆（东馆）",
-    "上海博物馆(东馆)",
-    "上博东馆"
-   ],
-   "lat": 31.22,
-   "lng": 121.5387
-  },
-  {
-   "name": "浦东美术馆",
-   "tier": "S",
-   "type": "museum",
-   "patterns": [
-    "浦东美术馆"
-   ],
-   "lat": 31.2383,
-   "lng": 121.4964
-  },
-  {
-   "name": "中华艺术宫",
-   "tier": "S",
-   "type": "museum",
-   "patterns": [
-    "中华艺术宫",
-    "上海美术馆"
-   ],
-   "lat": 31.1845,
-   "lng": 121.4944
-  },
-  {
-   "name": "上海当代艺术博物馆",
-   "tier": "S",
-   "type": "museum",
-   "patterns": [
-    "当代艺术博物馆",
-    "PSA"
-   ],
-   "lat": 31.201,
-   "lng": 121.4983
-  },
-  {
-   "name": "西岸美术馆",
-   "tier": "S",
-   "type": "museum",
-   "patterns": [
-    "西岸美术馆"
-   ],
-   "lat": 31.1677,
-   "lng": 121.4639
-  },
-  {
-   "name": "龙美术馆（西岸馆）",
-   "tier": "S",
-   "type": "museum",
-   "patterns": [
-    "龙美术馆西岸",
-    "龙美术馆（西岸",
-    "龙美术馆(西岸"
-   ],
-   "lat": 31.1778,
-   "lng": 121.4636
-  },
-  {
-   "name": "龙美术馆（浦东馆）",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "龙美术馆浦东",
-    "龙美术馆（浦东",
-    "龙美术馆(浦东"
-   ],
-   "lat": 31.2167,
-   "lng": 121.5435
-  },
-  {
-   "name": "余德耀美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "余德耀"
-   ],
-   "lat": 31.1773,
-   "lng": 121.464
-  },
-  {
-   "name": "UCCA Edge",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "UCCA"
-   ],
-   "lat": 31.2502,
-   "lng": 121.4521
-  },
-  {
-   "name": "复星艺术中心",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "复星艺术中心"
-   ],
-   "lat": 31.2389,
-   "lng": 121.495
-  },
-  {
-   "name": "上海外滩美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "外滩美术馆",
-    "RAM"
-   ],
-   "lat": 31.2412,
-   "lng": 121.4875
-  },
-  {
-   "name": "昊美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "昊美术馆"
-   ],
-   "lat": 31.2099,
-   "lng": 121.5868
-  },
-  {
-   "name": "明当代美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "明当代",
-    "McaM"
-   ],
-   "lat": 31.2072,
-   "lng": 121.4428
-  },
-  {
-   "name": "宝龙美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "宝龙美术馆"
-   ],
-   "lat": 31.1585,
-   "lng": 121.3579
-  },
-  {
-   "name": "上海油罐艺术中心",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "油罐艺术中心",
-    "TANK"
-   ],
-   "lat": 31.1715,
-   "lng": 121.4614
-  },
-  {
-   "name": "上海民生现代美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "民生现代美术馆"
-   ],
-   "lat": 31.2121,
-   "lng": 121.4447
-  },
-  {
-   "name": "艺仓美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "艺仓美术馆"
-   ],
-   "lat": 31.2348,
-   "lng": 121.5138
-  },
-  {
-   "name": "东一美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "东一美术馆"
-   ],
-   "lat": 31.2366,
-   "lng": 121.4902
-  },
-  {
-   "name": "上海玻璃博物馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "玻璃博物馆"
-   ],
-   "lat": 31.3438,
-   "lng": 121.4719
-  },
-  {
-   "name": "刘海粟美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "刘海粟美术馆"
-   ],
-   "lat": 31.2095,
-   "lng": 121.4193
-  },
-  {
-   "name": "START 星美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "星美术馆"
-   ]
-  },
-  {
-   "name": "上海久事美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "久事美术馆"
-   ]
-  },
-  {
-   "name": "Fotografiska 影像艺术中心",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "Fotografiska",
-    "影像艺术中心"
-   ]
-  },
-  {
-   "name": "中国工业设计博物馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "工业设计博物馆"
-   ]
-  },
-  {
-   "name": "上海世博展览馆",
-   "tier": "A",
-   "type": "expo",
-   "patterns": [
-    "世博展览馆"
-   ]
-  },
-  {
-   "name": "上海展览中心",
-   "tier": "A",
-   "type": "expo",
-   "patterns": [
-    "上海展览中心"
-   ]
-  },
-  {
-   "name": "西岸国际会展中心",
-   "tier": "A",
-   "type": "expo",
-   "patterns": [
-    "西岸国际会展中心"
-   ]
-  },
-  {
-   "name": "保利上海城市剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "保利上海城市剧院"
-   ]
-  },
-  {
-   "name": "上海保利云间剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "云间剧院"
-   ]
-  },
-  {
-   "name": "宛平剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "宛平剧院"
-   ]
-  },
-  {
-   "name": "久事·上海商城剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "上海商城剧院"
-   ]
-  },
-  {
-   "name": "大零号湾文化艺术中心",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "大零号湾"
-   ]
-  },
-  {
-   "name": "贺绿汀音乐厅",
-   "tier": "A",
-   "type": "concert_hall",
-   "patterns": [
-    "贺绿汀音乐厅"
-   ]
-  },
-  {
-   "name": "上海长滩音乐厅",
-   "tier": "A",
-   "type": "concert_hall",
-   "patterns": [
-    "长滩音乐厅"
-   ]
-  },
-  {
-   "name": "YOUNG剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "YOUNG剧场"
-   ]
-  },
-  {
-   "name": "上海艺海剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "艺海剧院"
-   ]
-  },
-  {
-   "name": "长江剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "长江剧场"
-   ]
-  },
-  {
-   "name": "上剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "上剧场"
-   ]
-  },
-  {
-   "name": "黄浦剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "黄浦剧场"
-   ]
-  },
-  {
-   "name": "大宁剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "大宁剧院"
-   ]
-  },
-  {
-   "name": "临港演艺中心",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "临港演艺中心"
-   ]
-  },
-  {
-   "name": "茉莉花剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "茉莉花剧场"
-   ]
-  },
-  {
-   "name": "上海共舞台",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "上海共舞台"
-   ]
-  },
-  {
-   "name": "大上海剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "大上海剧场"
-   ]
-  },
-  {
-   "name": "马兰花剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "马兰花剧场"
-   ]
-  },
-  {
-   "name": "上海儿童艺术剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "上海儿童艺术剧场"
-   ]
-  },
-  {
-   "name": "中国大戏院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "中国大戏院"
-   ]
-  },
-  {
-   "name": "周浦剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "周浦剧院"
-   ]
-  },
-  {
-   "name": "虹桥艺术中心",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "虹桥艺术中心"
-   ]
-  },
-  {
-   "name": "上海马戏城",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "上海马戏城"
-   ]
-  },
-  {
-   "name": "白玉兰剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "白玉兰剧场"
-   ]
-  },
-  {
-   "name": "仙乐斯木偶剧场",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "仙乐斯木偶剧场"
-   ]
-  },
-  {
-   "name": "光新无限演艺中心",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "光新无限演艺中心"
-   ]
-  },
-  {
-   "name": "嘉定影剧院",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "嘉定影剧院"
-   ]
-  },
-  {
-   "name": "上海LIVERSE音宇宙艺术中心",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "LIVERSE",
-    "音宇宙"
-   ]
-  },
-  {
-   "name": "育音堂",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "育音堂"
-   ]
-  },
-  {
-   "name": "MAO Livehouse",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "MAO"
-   ]
-  },
-  {
-   "name": "瓦肆 VAS",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "瓦肆"
-   ]
-  },
-  {
-   "name": "Modern Sky LAB",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "Modern Sky",
-    "摩登天空"
-   ]
-  },
-  {
-   "name": "回响之地",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "回响之地"
-   ]
-  },
-  {
-   "name": "新歌空间",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "新歌空间"
-   ]
-  },
-  {
-   "name": "林肯爵士乐上海中心",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "林肯爵士乐"
-   ]
-  },
-  {
-   "name": "JZClub 爵士上海俱乐部",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "JZClub",
-    "JZ Club"
-   ]
-  },
-  {
-   "name": "Hero Dome 英雄外滩演艺中心",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "Hero Dome",
-    "英雄外滩"
-   ]
-  },
-  {
-   "name": "THE PEARL 珍珠剧场",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "THE PEARL",
-    "珍珠剧场"
-   ]
-  },
-  {
-   "name": "CAVE 洞穴艺术现场",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "CAVE ART",
-    "洞穴艺术现场"
-   ]
-  },
-  {
-   "name": "上海绿树·CH8 LIVE",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "CH8"
-   ]
-  },
-  {
-   "name": "7HERTZ LIVE",
-   "tier": "A",
-   "type": "livehouse",
-   "patterns": [
-    "7HERTZ"
-   ]
-  },
-  {
-   "name": "U12剧场（浦东工人文化宫）",
-   "tier": "A",
-   "type": "theatre",
-   "patterns": [
-    "U12剧场"
-   ]
-  },
-  {
-   "name": "上海中国画院美术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "中国画院美术馆"
-   ],
-   "lat": 31.2048,
-   "lng": 121.4486
-  },
-  {
-   "name": "朱屺瞻艺术馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "朱屺瞻艺术馆"
-   ],
-   "lat": 31.2744,
-   "lng": 121.4861
-  },
-  {
-   "name": "董其昌书画艺术博物馆",
-   "tier": "A",
-   "type": "museum",
-   "patterns": [
-    "董其昌书画艺术博物馆"
-   ],
-   "lat": 31.0022,
-   "lng": 121.2314
+  "_说明": "场馆白名单。只有命中这里的场馆的活动才会出现在网站上。tier: S=大型/旗舰, A=专业中型/美术馆/知名 Livehouse。type 决定徽章文字和分类先验。patterns 是在「场馆+地址」里做子串匹配的关键词（任一命中即可），尽量写得具体，避免误命中。lat/lng 只在策展清单（展览/大型演出）需要坐标时使用，GCJ02。",
+  "types": {
+    "theatre": "专业剧院",
+    "concert_hall": "音乐厅",
+    "arena": "体育馆/大型场馆",
+    "museum": "美术馆/博物馆",
+    "expo": "展览中心",
+    "livehouse": "Livehouse"
+  },
+  "venues": [
+    {
+      "name": "上海大剧院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "上海大剧院"
+      ]
+    },
+    {
+      "name": "上海东方艺术中心",
+      "tier": "S",
+      "type": "concert_hall",
+      "patterns": [
+        "东方艺术中心"
+      ]
+    },
+    {
+      "name": "上海交响乐团音乐厅",
+      "tier": "S",
+      "type": "concert_hall",
+      "patterns": [
+        "上海交响乐团音乐厅",
+        "上交音乐厅"
+      ]
+    },
+    {
+      "name": "上海音乐厅",
+      "tier": "S",
+      "type": "concert_hall",
+      "patterns": [
+        "上海音乐厅"
+      ]
+    },
+    {
+      "name": "上海文化广场",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "上海文化广场"
+      ]
+    },
+    {
+      "name": "上海保利大剧院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "上海保利大剧院"
+      ]
+    },
+    {
+      "name": "上海大歌剧院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "上海大歌剧院"
+      ]
+    },
+    {
+      "name": "上音歌剧院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "上音歌剧院"
+      ]
+    },
+    {
+      "name": "上海西岸大剧院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "西岸大剧院"
+      ]
+    },
+    {
+      "name": "九棵树（上海）未来艺术中心",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "九棵树"
+      ]
+    },
+    {
+      "name": "美琪大戏院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "美琪大戏院"
+      ]
+    },
+    {
+      "name": "上海国际舞蹈中心",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "国际舞蹈中心"
+      ]
+    },
+    {
+      "name": "上海话剧艺术中心",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "上海话剧艺术中心",
+        "话剧艺术中心"
+      ]
+    },
+    {
+      "name": "北外滩友邦大剧院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "友邦大剧院"
+      ]
+    },
+    {
+      "name": "天蟾逸夫舞台",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "天蟾逸夫舞台",
+        "逸夫舞台"
+      ]
+    },
+    {
+      "name": "兰心大戏院",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "兰心大戏院"
+      ]
+    },
+    {
+      "name": "星在文化中心",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "星在文化中心"
+      ]
+    },
+    {
+      "name": "梅赛德斯-奔驰文化中心",
+      "tier": "S",
+      "type": "arena",
+      "patterns": [
+        "梅赛德斯",
+        "奔驰文化中心"
+      ],
+      "lat": 31.1885,
+      "lng": 121.4934
+    },
+    {
+      "name": "上海体育场",
+      "tier": "S",
+      "type": "arena",
+      "patterns": [
+        "上海体育场"
+      ],
+      "lat": 31.1815,
+      "lng": 121.442
+    },
+    {
+      "name": "上海体育馆",
+      "tier": "S",
+      "type": "arena",
+      "patterns": [
+        "上海体育馆",
+        "上海大舞台"
+      ],
+      "lat": 31.1814,
+      "lng": 121.4383
+    },
+    {
+      "name": "东方体育中心",
+      "tier": "S",
+      "type": "arena",
+      "patterns": [
+        "东方体育中心"
+      ],
+      "lat": 31.1525,
+      "lng": 121.4794
+    },
+    {
+      "name": "国家会展中心（上海）",
+      "tier": "S",
+      "type": "arena",
+      "patterns": [
+        "国家会展中心"
+      ],
+      "lat": 31.1897,
+      "lng": 121.302
+    },
+    {
+      "name": "交通银行前滩31演艺中心",
+      "tier": "S",
+      "type": "theatre",
+      "patterns": [
+        "前滩31"
+      ],
+      "lat": 31.1551,
+      "lng": 121.4806
+    },
+    {
+      "name": "上海国际体操中心",
+      "tier": "S",
+      "type": "arena",
+      "patterns": [
+        "国际体操中心"
+      ],
+      "lat": 31.1834,
+      "lng": 121.4167
+    },
+    {
+      "name": "旗忠森林体育城网球中心",
+      "tier": "S",
+      "type": "arena",
+      "patterns": [
+        "旗忠"
+      ],
+      "lat": 31.0436,
+      "lng": 121.3604
+    },
+    {
+      "name": "上海静安体育中心",
+      "tier": "A",
+      "type": "arena",
+      "patterns": [
+        "静安体育中心"
+      ]
+    },
+    {
+      "name": "上海博物馆",
+      "tier": "S",
+      "type": "museum",
+      "patterns": [
+        "上海博物馆"
+      ],
+      "lat": 31.2287,
+      "lng": 121.4757
+    },
+    {
+      "name": "上海博物馆东馆",
+      "tier": "S",
+      "type": "museum",
+      "patterns": [
+        "上海博物馆东馆",
+        "上海博物馆（东馆）",
+        "上海博物馆(东馆)",
+        "上博东馆"
+      ],
+      "lat": 31.22,
+      "lng": 121.5387
+    },
+    {
+      "name": "浦东美术馆",
+      "tier": "S",
+      "type": "museum",
+      "patterns": [
+        "浦东美术馆"
+      ],
+      "lat": 31.2383,
+      "lng": 121.4964
+    },
+    {
+      "name": "中华艺术宫",
+      "tier": "S",
+      "type": "museum",
+      "patterns": [
+        "中华艺术宫",
+        "上海美术馆"
+      ],
+      "lat": 31.1845,
+      "lng": 121.4944
+    },
+    {
+      "name": "上海当代艺术博物馆",
+      "tier": "S",
+      "type": "museum",
+      "patterns": [
+        "当代艺术博物馆",
+        "PSA"
+      ],
+      "lat": 31.201,
+      "lng": 121.4983
+    },
+    {
+      "name": "西岸美术馆",
+      "tier": "S",
+      "type": "museum",
+      "patterns": [
+        "西岸美术馆"
+      ],
+      "lat": 31.1677,
+      "lng": 121.4639
+    },
+    {
+      "name": "龙美术馆（西岸馆）",
+      "tier": "S",
+      "type": "museum",
+      "patterns": [
+        "龙美术馆西岸",
+        "龙美术馆（西岸",
+        "龙美术馆(西岸"
+      ],
+      "lat": 31.1778,
+      "lng": 121.4636
+    },
+    {
+      "name": "龙美术馆（浦东馆）",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "龙美术馆浦东",
+        "龙美术馆（浦东",
+        "龙美术馆(浦东"
+      ],
+      "lat": 31.2167,
+      "lng": 121.5435
+    },
+    {
+      "name": "余德耀美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "余德耀"
+      ],
+      "lat": 31.1773,
+      "lng": 121.464
+    },
+    {
+      "name": "UCCA Edge",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "UCCA"
+      ],
+      "lat": 31.2502,
+      "lng": 121.4521
+    },
+    {
+      "name": "复星艺术中心",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "复星艺术中心"
+      ],
+      "lat": 31.2389,
+      "lng": 121.495
+    },
+    {
+      "name": "上海外滩美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "外滩美术馆",
+        "RAM"
+      ],
+      "lat": 31.2412,
+      "lng": 121.4875
+    },
+    {
+      "name": "昊美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "昊美术馆"
+      ],
+      "lat": 31.2099,
+      "lng": 121.5868
+    },
+    {
+      "name": "明当代美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "明当代",
+        "McaM"
+      ],
+      "lat": 31.2072,
+      "lng": 121.4428
+    },
+    {
+      "name": "宝龙美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "宝龙美术馆"
+      ],
+      "lat": 31.1585,
+      "lng": 121.3579
+    },
+    {
+      "name": "上海油罐艺术中心",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "油罐艺术中心",
+        "TANK"
+      ],
+      "lat": 31.1715,
+      "lng": 121.4614
+    },
+    {
+      "name": "上海民生现代美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "民生现代美术馆"
+      ],
+      "lat": 31.2121,
+      "lng": 121.4447
+    },
+    {
+      "name": "艺仓美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "艺仓美术馆"
+      ],
+      "lat": 31.2348,
+      "lng": 121.5138
+    },
+    {
+      "name": "东一美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "东一美术馆"
+      ],
+      "lat": 31.2366,
+      "lng": 121.4902
+    },
+    {
+      "name": "上海玻璃博物馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "玻璃博物馆"
+      ],
+      "lat": 31.3438,
+      "lng": 121.4719
+    },
+    {
+      "name": "刘海粟美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "刘海粟美术馆"
+      ],
+      "lat": 31.2095,
+      "lng": 121.4193
+    },
+    {
+      "name": "START 星美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "星美术馆"
+      ]
+    },
+    {
+      "name": "上海久事美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "久事美术馆"
+      ]
+    },
+    {
+      "name": "Fotografiska 影像艺术中心",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "Fotografiska",
+        "影像艺术中心"
+      ]
+    },
+    {
+      "name": "中国工业设计博物馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "工业设计博物馆"
+      ]
+    },
+    {
+      "name": "上海世博展览馆",
+      "tier": "A",
+      "type": "expo",
+      "patterns": [
+        "世博展览馆"
+      ]
+    },
+    {
+      "name": "上海展览中心",
+      "tier": "A",
+      "type": "expo",
+      "patterns": [
+        "上海展览中心"
+      ]
+    },
+    {
+      "name": "西岸国际会展中心",
+      "tier": "A",
+      "type": "expo",
+      "patterns": [
+        "西岸国际会展中心"
+      ]
+    },
+    {
+      "name": "保利上海城市剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "保利上海城市剧院"
+      ]
+    },
+    {
+      "name": "上海保利云间剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "云间剧院"
+      ]
+    },
+    {
+      "name": "宛平剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "宛平剧院"
+      ]
+    },
+    {
+      "name": "久事·上海商城剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "上海商城剧院"
+      ]
+    },
+    {
+      "name": "大零号湾文化艺术中心",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "大零号湾"
+      ]
+    },
+    {
+      "name": "贺绿汀音乐厅",
+      "tier": "A",
+      "type": "concert_hall",
+      "patterns": [
+        "贺绿汀音乐厅"
+      ]
+    },
+    {
+      "name": "上海长滩音乐厅",
+      "tier": "A",
+      "type": "concert_hall",
+      "patterns": [
+        "长滩音乐厅"
+      ]
+    },
+    {
+      "name": "YOUNG剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "YOUNG剧场"
+      ]
+    },
+    {
+      "name": "上海艺海剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "艺海剧院"
+      ]
+    },
+    {
+      "name": "长江剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "长江剧场"
+      ]
+    },
+    {
+      "name": "上剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "上剧场"
+      ]
+    },
+    {
+      "name": "黄浦剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "黄浦剧场"
+      ]
+    },
+    {
+      "name": "大宁剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "大宁剧院"
+      ]
+    },
+    {
+      "name": "临港演艺中心",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "临港演艺中心"
+      ]
+    },
+    {
+      "name": "茉莉花剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "茉莉花剧场"
+      ]
+    },
+    {
+      "name": "上海共舞台",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "上海共舞台"
+      ]
+    },
+    {
+      "name": "大上海剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "大上海剧场"
+      ]
+    },
+    {
+      "name": "马兰花剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "马兰花剧场"
+      ]
+    },
+    {
+      "name": "上海儿童艺术剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "上海儿童艺术剧场"
+      ]
+    },
+    {
+      "name": "中国大戏院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "中国大戏院"
+      ]
+    },
+    {
+      "name": "周浦剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "周浦剧院"
+      ]
+    },
+    {
+      "name": "虹桥艺术中心",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "虹桥艺术中心"
+      ]
+    },
+    {
+      "name": "上海马戏城",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "上海马戏城"
+      ]
+    },
+    {
+      "name": "白玉兰剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "白玉兰剧场"
+      ]
+    },
+    {
+      "name": "仙乐斯木偶剧场",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "仙乐斯木偶剧场"
+      ]
+    },
+    {
+      "name": "光新无限演艺中心",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "光新无限演艺中心"
+      ]
+    },
+    {
+      "name": "嘉定影剧院",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "嘉定影剧院"
+      ]
+    },
+    {
+      "name": "上海LIVERSE音宇宙艺术中心",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "LIVERSE",
+        "音宇宙"
+      ]
+    },
+    {
+      "name": "育音堂",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "育音堂"
+      ]
+    },
+    {
+      "name": "MAO Livehouse",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "MAO"
+      ]
+    },
+    {
+      "name": "瓦肆 VAS",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "瓦肆"
+      ]
+    },
+    {
+      "name": "Modern Sky LAB",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "Modern Sky",
+        "摩登天空"
+      ]
+    },
+    {
+      "name": "回响之地",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "回响之地"
+      ]
+    },
+    {
+      "name": "新歌空间",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "新歌空间"
+      ]
+    },
+    {
+      "name": "林肯爵士乐上海中心",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "林肯爵士乐"
+      ]
+    },
+    {
+      "name": "JZClub 爵士上海俱乐部",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "JZClub",
+        "JZ Club"
+      ]
+    },
+    {
+      "name": "Hero Dome 英雄外滩演艺中心",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "Hero Dome",
+        "英雄外滩"
+      ]
+    },
+    {
+      "name": "THE PEARL 珍珠剧场",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "THE PEARL",
+        "珍珠剧场"
+      ]
+    },
+    {
+      "name": "CAVE 洞穴艺术现场",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "CAVE ART",
+        "洞穴艺术现场"
+      ]
+    },
+    {
+      "name": "上海绿树·CH8 LIVE",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "CH8"
+      ]
+    },
+    {
+      "name": "7HERTZ LIVE",
+      "tier": "A",
+      "type": "livehouse",
+      "patterns": [
+        "7HERTZ"
+      ]
+    },
+    {
+      "name": "U12剧场（浦东工人文化宫）",
+      "tier": "A",
+      "type": "theatre",
+      "patterns": [
+        "U12剧场"
+      ]
+    },
+    {
+      "name": "上海中国画院美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "中国画院美术馆"
+      ],
+      "lat": 31.2048,
+      "lng": 121.4486
+    },
+    {
+      "name": "朱屺瞻艺术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "朱屺瞻艺术馆"
+      ],
+      "lat": 31.2744,
+      "lng": 121.4861
+    },
+    {
+      "name": "董其昌书画艺术博物馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "董其昌书画艺术博物馆"
+      ],
+      "lat": 31.0022,
+      "lng": 121.2314
+    },
+    {
+      "name": "程十发美术馆",
+      "tier": "A",
+      "type": "museum",
+      "patterns": [
+        "程十发美术馆"
+      ],
+      "lat": 31.1957,
+      "lng": 121.4068
+    }
+  ],
+  "noise": {
+    "_说明": "命中任一正则即剔除（即使场馆在白名单内）。",
+    "title": [
+      "DIY|diy|手作|零基础|体验课|初体验|画室|工坊|泥板画|团扇|漂漆",
+      "(?-i:(?<![A-Za-z])(VR|XR|MR)(?![A-Za-z]))|VisionPro|大空间",
+      "密室|剧本杀|实景游戏|闯关",
+      "烛光",
+      "开放麦",
+      "研学|讲解服务|人工精讲",
+      "年度通票|年卡|会员卡",
+      "徒步|爬山|露营|萌宠|乐园",
+      "产业链|产业展|供应链|招商",
+      "(秋|春|暑|寒)季班|培训|课程|工作坊|讲座|导览|开放日|欣赏会|市民开放",
+      "见面会|签售|应援"
+    ]
   }
- ],
- "noise": {
-  "_说明": "命中任一正则即剔除（即使场馆在白名单内）。",
-  "title": [
-   "DIY|diy|手作|零基础|体验课|初体验|画室|工坊|泥板画|团扇|漂漆",
-   "(?-i:(?<![A-Za-z])(VR|XR|MR)(?![A-Za-z]))|VisionPro|大空间",
-   "密室|剧本杀|实景游戏|闯关",
-   "烛光",
-   "开放麦",
-   "研学|讲解服务|人工精讲",
-   "年度通票|年卡|会员卡",
-   "徒步|爬山|露营|萌宠|乐园",
-   "产业链|产业展|供应链|招商",
-   "(秋|春|暑|寒)季班|培训|课程|工作坊|讲座|导览|开放日|欣赏会|市民开放",
-   "见面会|签售|应援"
-  ]
- }
 }

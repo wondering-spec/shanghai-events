@@ -88,48 +88,6 @@
   "poster_url": null
  },
  {
-  "oid": "上海交响乐团音乐厅:21805",
-  "title": "上交室内乐 2：北极星四重奏演绎莫扎特与德沃夏克丨上海交响乐团音乐季",
-  "venue": "上海交响乐团音乐厅",
-  "start_date": "2026-11-06",
-  "end_date": "2026-11-06",
-  "start_time": "19:15",
-  "sessions": 1,
-  "platform_category": "交响乐",
-  "price_min": null,
-  "price_text": "",
-  "url": "https://www.shsymphony.cn/symphonypc/index.html",
-  "poster_url": "https://img2.shsymphony.cn/pic/theatre/71e31658bb0ff523.jpg"
- },
- {
-  "oid": "上海交响乐团音乐厅:21828",
-  "title": "米歇尔·达尔贝托演奏莫扎特丨上海交响乐团音乐季",
-  "venue": "上海交响乐团音乐厅",
-  "start_date": "2026-11-06",
-  "end_date": "2026-11-06",
-  "start_time": "19:30",
-  "sessions": 1,
-  "platform_category": "交响乐",
-  "price_min": null,
-  "price_text": "",
-  "url": "https://www.shsymphony.cn/symphonypc/index.html",
-  "poster_url": "https://img2.shsymphony.cn/pic/theatre/2c20eed792c0d4df.jpg"
- },
- {
-  "oid": "上海交响乐团音乐厅:21762",
-  "title": "节奏幻想——钱骏平、林喆与上海交响乐团 丨上海交响乐团音乐季",
-  "venue": "上海交响乐团音乐厅",
-  "start_date": "2026-11-07",
-  "end_date": "2026-11-07",
-  "start_time": "19:30",
-  "sessions": 1,
-  "platform_category": "交响乐",
-  "price_min": null,
-  "price_text": "",
-  "url": "https://www.shsymphony.cn/symphonypc/index.html",
-  "poster_url": "https://img2.shsymphony.cn/pic/theatre/f91fc14cd2b30ce1.jpg"
- },
- {
   "oid": "上海交响乐团音乐厅:21763",
   "title": "秋夜北国回响——李心草、秦立巍与上海交响乐团丨上海交响乐团音乐季",
   "venue": "上海交响乐团音乐厅",
@@ -379,7 +337,7 @@
   "price_min": null,
   "price_text": "",
   "url": "https://www.shsymphony.cn/symphonypc/index.html",
-  "poster_url": "https://img2.shsymphony.cn/pic/theatre/07d87d70f472f5d4.jpg"
+  "poster_url": "https://img2.shsymphony.cn/pic/theatre/c0f7d64ea970329a.jpg"
  },
  {
   "oid": "上海交响乐团音乐厅:21813",
@@ -564,46 +522,32 @@
   "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/a853a778dcba2d33.png"
  },
  {
-  "oid": "上音歌剧院:22294",
-  "title": "走近“上海当代音乐周”·市民开放系列活动",
+  "oid": "上音歌剧院:22306",
+  "title": "红色旋律·琴韵华章 手风琴专场音乐会",
   "venue": "上音歌剧院",
-  "start_date": "2026-11-02",
-  "end_date": "2026-11-09",
-  "start_time": "13:30",
+  "start_date": "2026-11-12",
+  "end_date": "2026-11-12",
+  "start_time": "19:15",
   "sessions": 1,
-  "platform_category": null,
+  "platform_category": "音乐会",
   "price_min": 0.0,
   "price_text": "",
-  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22294",
-  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/c845689b945792ff.jpg"
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22306",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/0ed99d8357fa971f.jpg"
  },
  {
-  "oid": "上音歌剧院:22295",
-  "title": "群英和鸣 电子管风琴优秀成果音乐会",
+  "oid": "上音歌剧院:22298",
+  "title": "沃土长歌 上海音乐学院民族音乐系 坠胡专场音乐会",
   "venue": "上音歌剧院",
-  "start_date": "2026-11-07",
-  "end_date": "2026-11-07",
-  "start_time": "19:15",
+  "start_date": "2026-11-12",
+  "end_date": "2026-11-12",
+  "start_time": "19:30",
   "sessions": 1,
   "platform_category": "音乐会",
   "price_min": 30.0,
   "price_text": "30-180元",
-  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22295",
-  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/4484dede4567bd6b.jpg"
- },
- {
-  "oid": "上音歌剧院:22263",
-  "title": "竹籁万象·清音和鸣——陈铭雷从教10周年 师生音乐会",
-  "venue": "上音歌剧院",
-  "start_date": "2026-11-08",
-  "end_date": "2026-11-08",
-  "start_time": "14:30",
-  "sessions": 1,
-  "platform_category": "音乐会",
-  "price_min": 40.0,
-  "price_text": "40-80元",
-  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22263",
-  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/ee04d6718760befa.jpg"
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22298",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/441fd3cc643ee987.jpg"
  },
  {
   "oid": "上音歌剧院:22228",
@@ -620,6 +564,34 @@
   "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/87456d7d67c975d9.jpg"
  },
  {
+  "oid": "上音歌剧院:22302",
+  "title": "琴与诗——洪逸珊钢琴独奏音乐会",
+  "venue": "上音歌剧院",
+  "start_date": "2026-11-13",
+  "end_date": "2026-11-13",
+  "start_time": "19:30",
+  "sessions": 1,
+  "platform_category": "音乐会",
+  "price_min": 0.0,
+  "price_text": "",
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22302",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/d84b9d0135acc15f.jpg"
+ },
+ {
+  "oid": "上音歌剧院:22309",
+  "title": "上海音乐学院附中建校七十五周年系列 教师专场音乐会",
+  "venue": "上音歌剧院",
+  "start_date": "2026-11-18",
+  "end_date": "2026-11-18",
+  "start_time": "19:15",
+  "sessions": 1,
+  "platform_category": null,
+  "price_min": 0.0,
+  "price_text": "",
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22309",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/1a434654e757bbb9.jpg"
+ },
+ {
   "oid": "上音歌剧院:22297",
   "title": "上海当代音乐周 开幕式暨交响作品音乐会",
   "venue": "上音歌剧院",
@@ -634,6 +606,48 @@
   "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/c71538cde807667e.jpg"
  },
  {
+  "oid": "上音歌剧院:22300",
+  "title": "2026上海当代音乐周 声乐与电影音乐作品音乐会",
+  "venue": "上音歌剧院",
+  "start_date": "2026-11-19",
+  "end_date": "2026-11-19",
+  "start_time": "19:30",
+  "sessions": 1,
+  "platform_category": "音乐会",
+  "price_min": 30.0,
+  "price_text": "30-280元",
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22300",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/ea3f6312fac619ea.jpg"
+ },
+ {
+  "oid": "上音歌剧院:22304",
+  "title": "2026上海当代音乐周经典与新声管弦乐作品音乐会",
+  "venue": "上音歌剧院",
+  "start_date": "2026-11-20",
+  "end_date": "2026-11-20",
+  "start_time": "19:30",
+  "sessions": 1,
+  "platform_category": "音乐会",
+  "price_min": 30.0,
+  "price_text": "30-280元",
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22304",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/a3c08e7589696d48.jpg"
+ },
+ {
+  "oid": "上音歌剧院:22305",
+  "title": "2026上海当代音乐周民族管弦乐作品音乐会",
+  "venue": "上音歌剧院",
+  "start_date": "2026-11-21",
+  "end_date": "2026-11-21",
+  "start_time": "19:30",
+  "sessions": 1,
+  "platform_category": "音乐会",
+  "price_min": 30.0,
+  "price_text": "30-280元",
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22305",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/418da7a2e6ed62a5.jpg"
+ },
+ {
   "oid": "上音歌剧院:22293",
   "title": "风的漫游——当代琵琶作品专场音乐会",
   "venue": "上音歌剧院",
@@ -646,6 +660,34 @@
   "price_text": "30-280元",
   "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22293",
   "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/5789b34a940b502e.jpg"
+ },
+ {
+  "oid": "上音歌剧院:22308",
+  "title": "2026上海当代音乐周闭幕式暨交响作品音乐会",
+  "venue": "上音歌剧院",
+  "start_date": "2026-11-22",
+  "end_date": "2026-11-22",
+  "start_time": "19:30",
+  "sessions": 1,
+  "platform_category": "音乐会",
+  "price_min": 30.0,
+  "price_text": "30-280元",
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22308",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/088998443368b13f.jpg"
+ },
+ {
+  "oid": "上音歌剧院:22299",
+  "title": "刘雯雯唢呐与爵士音乐会",
+  "venue": "上音歌剧院",
+  "start_date": "2026-11-28",
+  "end_date": "2026-11-28",
+  "start_time": "19:30",
+  "sessions": 1,
+  "platform_category": "音乐会",
+  "price_min": 30.0,
+  "price_text": "30-280元",
+  "url": "https://www.syoperahouse.com/sytheatre/index.html#/ticket/detail/22299",
+  "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/a5a6f0e62d4b3afc.jpg"
  },
  {
   "oid": "上音歌剧院:22252",
@@ -774,77 +816,11 @@
   "poster_url": "https://ticketimg.syoperahouse.com/pic/theatre/ec92cf8e4ebbe24d.jpg"
  },
  {
-  "oid": "上海东方艺术中心:9878900",
-  "title": "瓦西里∙佩特连科与英国皇家爱乐乐团2026上海音乐会",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-09",
-  "end_date": "2026-11-09",
-  "start_time": "19:30",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
-  "oid": "上海东方艺术中心:9856400",
-  "title": "中国经典舞剧《丝路花雨》2025年新版",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-07",
-  "end_date": "2026-11-08",
-  "start_time": "14:00",
-  "sessions": 3,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
-  "oid": "上海东方艺术中心:9940600",
-  "title": "《加勒比海盗》超燃史诗影视经典音乐会——俄耳浦斯乐团",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-08",
-  "end_date": "2026-11-08",
-  "start_time": "19:30",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
   "oid": "上海东方艺术中心:9939900",
   "title": "爵士天后戴安娜·克瑞儿Diana Krall 2026上海音乐会",
   "venue": "上海东方艺术中心",
   "start_date": "2026-11-18",
   "end_date": "2026-11-18",
-  "start_time": "19:30",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
-  "oid": "上海东方艺术中心:9483100",
-  "title": "【交响+演唱】“四大名著”红楼梦·西游记·三国演义·水浒传 大型交响演唱会",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-07",
-  "end_date": "2026-11-07",
-  "start_time": "19:30",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
-  "oid": "上海东方艺术中心:9415200",
-  "title": "2026东方市民音乐会：海上双钢琴师——小捷杰耶夫与方演双钢琴音乐会",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-07",
-  "end_date": "2026-11-07",
-  "start_time": "10:00",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
-  "oid": "上海东方艺术中心:9714800",
-  "title": "40Fingers—意大利指弹天团世界巡演 上海站",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-06",
-  "end_date": "2026-11-06",
   "start_time": "19:30",
   "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
@@ -868,6 +844,17 @@
   "start_date": "2026-11-28",
   "end_date": "2026-11-28",
   "start_time": "19:45",
+  "sessions": 1,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
+  "oid": "上海东方艺术中心:10063100",
+  "title": "“探索俄罗斯”音乐节——柴科夫斯基之夜 艺术总监:孔祥东 指挥:张亮 演奏:上海爱乐乐团",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-11-30",
+  "end_date": "2026-11-30",
+  "start_time": "19:30",
   "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
@@ -950,17 +937,6 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:9824300",
-  "title": "第二十五届中国上海国际艺术节参演节目-维京格尔·奥拉夫松钢琴独奏音乐会",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-05",
-  "end_date": "2026-11-05",
-  "start_time": "19:30",
-  "sessions": 1,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
   "oid": "上海东方艺术中心:9856000",
   "title": "第二十五届中国上海国际艺术节参演剧目-俄罗斯瓦赫坦戈夫剧院 话剧《普希金小说集》",
   "venue": "上海东方艺术中心",
@@ -968,17 +944,6 @@
   "end_date": "2026-11-15",
   "start_time": "19:15",
   "sessions": 2,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
-  "oid": "上海东方艺术中心:9815000",
-  "title": "第二十五届中国上海国际艺术节参演节目-卡蒂雅·布尼亚季什维莉钢琴独奏音乐会",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-11-15",
-  "end_date": "2026-11-15",
-  "start_time": "19:30",
-  "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
  },
@@ -1005,11 +970,11 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:10063100",
-  "title": "“探索俄罗斯”音乐节——柴科夫斯基之夜 艺术总监:孔祥东 指挥:张亮 演奏:上海爱乐乐团",
+  "oid": "上海东方艺术中心:10064700",
+  "title": "《我相信》籁之音极光男声合唱团流行经典歌曲合唱音乐会",
   "venue": "上海东方艺术中心",
-  "start_date": "2026-11-30",
-  "end_date": "2026-11-30",
+  "start_date": "2026-12-18",
+  "end_date": "2026-12-18",
   "start_time": "19:30",
   "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
@@ -1038,13 +1003,13 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:10064700",
-  "title": "《我相信》籁之音极光男声合唱团流行经典歌曲合唱音乐会",
+  "oid": "上海东方艺术中心:10125700",
+  "title": "濮存昕领衔主演 易卜生经典话剧《建筑大师》 首演二十周年纪念版",
   "venue": "上海东方艺术中心",
-  "start_date": "2026-12-18",
-  "end_date": "2026-12-18",
-  "start_time": "19:30",
-  "sessions": 1,
+  "start_date": "2026-12-19",
+  "end_date": "2026-12-20",
+  "start_time": "19:15",
+  "sessions": 2,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
  },
@@ -1093,17 +1058,6 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:9793900",
-  "title": "俄罗斯鞑靼国家模范剧院芭蕾舞剧《胡桃夹子》交响乐团现场伴奏版",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-12-24",
-  "end_date": "2026-12-25",
-  "start_time": "19:15",
-  "sessions": 2,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
   "oid": "上海东方艺术中心:10011100",
   "title": "《坂本龙一&久石让》经典作品音乐会",
   "venue": "上海东方艺术中心",
@@ -1111,6 +1065,17 @@
   "end_date": "2026-12-25",
   "start_time": "19:45",
   "sessions": 1,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
+  "oid": "上海东方艺术中心:9793900",
+  "title": "俄罗斯鞑靼国家模范剧院芭蕾舞剧《胡桃夹子》交响乐团现场伴奏版",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-12-24",
+  "end_date": "2026-12-25",
+  "start_time": "19:15",
+  "sessions": 2,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
  },
@@ -1181,6 +1146,17 @@
   "poster_url": null
  },
  {
+  "oid": "上海东方艺术中心:10118200",
+  "title": "“多厨狂喜”白金交响乐团音乐会",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-12-05",
+  "end_date": "2026-12-05",
+  "start_time": "19:30",
+  "sessions": 1,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
   "oid": "上海东方艺术中心:10058400",
   "title": "《当巴赫遇见海顿》  合唱与管弦乐作品音乐会",
   "venue": "上海东方艺术中心",
@@ -1208,6 +1184,17 @@
   "venue": "上海东方艺术中心",
   "start_date": "2026-12-11",
   "end_date": "2026-12-11",
+  "start_time": "19:45",
+  "sessions": 1,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
+  "oid": "上海东方艺术中心:10126800",
+  "title": "春花秋月与浪漫小径  中法声乐作品专场音乐会",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-12-12",
+  "end_date": "2026-12-12",
   "start_time": "19:45",
   "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
