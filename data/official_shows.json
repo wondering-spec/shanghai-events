@@ -1116,17 +1116,6 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:9825700",
-  "title": "俄罗斯鞑靼国家模范剧院芭蕾舞剧《舞姬》交响乐团现场伴奏版",
-  "venue": "上海东方艺术中心",
-  "start_date": "2026-12-27",
-  "end_date": "2026-12-27",
-  "start_time": "14:00",
-  "sessions": 2,
-  "url": "https://www.shoac.com.cn/#/",
-  "poster_url": null
- },
- {
   "oid": "上海东方艺术中心:9985800",
   "title": "2027上海儿童新年音乐会（交响演唱版）",
   "venue": "上海东方艺术中心",
@@ -1138,13 +1127,13 @@
   "poster_url": null
  },
  {
-  "oid": "上海东方艺术中心:9090600",
-  "title": "未来大师：巴赫×苏轼 跨时空的邂逅——匡俊宏吉他独奏音乐会",
+  "oid": "上海东方艺术中心:9825700",
+  "title": "俄罗斯鞑靼国家模范剧院芭蕾舞剧《舞姬》交响乐团现场伴奏版",
   "venue": "上海东方艺术中心",
-  "start_date": "2026-12-05",
-  "end_date": "2026-12-05",
-  "start_time": "19:45",
-  "sessions": 1,
+  "start_date": "2026-12-27",
+  "end_date": "2026-12-27",
+  "start_time": "14:00",
+  "sessions": 2,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
  },
@@ -1155,6 +1144,17 @@
   "start_date": "2026-12-05",
   "end_date": "2026-12-05",
   "start_time": "10:00",
+  "sessions": 1,
+  "url": "https://www.shoac.com.cn/#/",
+  "poster_url": null
+ },
+ {
+  "oid": "上海东方艺术中心:9090600",
+  "title": "未来大师：巴赫×苏轼 跨时空的邂逅——匡俊宏吉他独奏音乐会",
+  "venue": "上海东方艺术中心",
+  "start_date": "2026-12-05",
+  "end_date": "2026-12-05",
+  "start_time": "19:45",
   "sessions": 1,
   "url": "https://www.shoac.com.cn/#/",
   "poster_url": null
